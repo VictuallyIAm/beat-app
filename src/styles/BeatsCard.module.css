@@ -1,0 +1,99 @@
+.cardBody {
+  margin: 0;
+  padding-left: 10px;
+  position: static;
+  z-index: 0;
+  /* display: grid;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  align-items: center; */
+}
+.cardBody:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+.fa {
+  -webkit-animation-name: fa-beat;
+  animation-name: fa-beat;
+  -webkit-animation-delay: var(--fa-animation-delay, 0s);
+  animation-delay: var(--fa-animation-delay, 0s);
+  -webkit-animation-direction: var(--fa-animation-direction, normal);
+  animation-direction: var(--fa-animation-direction, normal);
+  -webkit-animation-duration: var(--fa-animation-duration, 1s);
+  animation-duration: var(--fa-animation-duration, 1s);
+  -webkit-animation-iteration-count: var(
+    --fa-animation-iteration-count,
+    infinite
+  );
+  animation-iteration-count: var(--fa-animation-iteration-count, infinite);
+  -webkit-animation-timing-function: var(--fa-animation-timing, ease-in-out);
+  animation-timing-function: var(--fa-animation-timing, ease-in-out);
+}
+
+.card {
+  width: 180px;
+  height: 270px;
+  background-color: #080e0e;
+  position: relative;
+  justify-self: center;
+  border: 1px solid #85858554;
+  border-radius: 4px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: border 0.2s ease;
+  margin-bottom: 10px;
+  z-index: 1;
+}
+.card img {
+  max-height: 70%;
+  min-width: 90%;
+  padding: 10px;
+  object-fit: cover;
+  transition: transform 0.2s ease;
+  z-index: 2;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #00000062;
+  display: grid;
+  place-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  color: #fff;
+  z-index: 2;
+}
+.card:hover {
+  border: 1px solid #c7c7c7;
+}
+.card:hover > .overlay {
+  opacity: 1;
+}
+.trackDescription {
+  color: white;
+  margin-top: -20px;
+  padding-left: 20px;
+}
+.play {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #000000bb;
+  display: grid;
+  place-content: center;
+  cursor: default;
+
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.4s ease 0.15s;
+}
+.play i {
+  font-size: 14px;
+}
+.card:hover > .overlay .play {
+  opacity: 1;
+  transform: scale(1);
+}

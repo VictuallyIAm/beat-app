@@ -1,0 +1,50 @@
+.dropdown {
+  position: relative;
+  cursor: pointer;
+  &:hover {
+    color: gray;
+  }
+}
+
+.dropdown .dropdownContent {
+  color: white !important;
+  position: fixed;
+  background-color: #09072b;
+  width: 100%;
+  z-index: 999;
+}
+
+// .dropdown {
+//   animation-iteration-count: 1;
+//   animation-duration: 1s;
+//   animation-name: slide;
+//   animation-fill-mode: forwards;
+// }
+
+// @keyframes slide {
+//   0% {
+//     height: 10%;
+//   }
+//   100% {
+//     height: 80%;
+//   }
+// }
+
+.dropdownContent div {
+  padding: 3px 7px 2px;
+  box-sizing: border-box;
+  box-shadow: inset 2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 999;
+}
+.dropdownContent div:hover {
+  color: gray;
+}
+.dropdownIconContainer {
+  display: flex;
+  justify-content: center;
+}
+.arrowSign {
+  margin: 5px 5px 2px 2px;
+  padding-left: -6px;
+}
