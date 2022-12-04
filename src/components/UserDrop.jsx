@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import styles from '../styles/Dropdown.module.css'
+import styles from '../styles/UserDrop.module.scss'
 import { IoIosArrowDown } from 'react-icons/io'
 
-export const UserDrop = ({ userName, userLogout }) => {
+export const UserDrop = ({ displayName, userLogout }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -13,7 +13,7 @@ export const UserDrop = ({ userName, userLogout }) => {
       onMouseLeave={(e) => setIsOpen(!isOpen)}
     >
       <div className={styles.dropdownIconContainer}>
-        <div className={styles.dropdownBtn}>Hi, {userName}</div>
+        <div className={styles.dropdownBtn}>Hi, {displayName}</div>
         <IoIosArrowDown className={styles.arrowSign} />
       </div>
       {isOpen && (

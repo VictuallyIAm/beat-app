@@ -1,0 +1,47 @@
+.navbar {
+  border: 1px solid #ccc;
+  min-height: 80vh;
+  border-radius: 10px;
+  background-color: rgba($color: #001018, $alpha: 0.6);
+  margin: 17px;
+
+  .user {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem;
+
+    h4 {
+      color: white;
+    }
+  }
+
+  nav ul {
+    li {
+      border-bottom: 1px solid #ccc;
+      padding: 0.5rem;
+      position: relative;
+      a {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.active {
+  cursor: pointer;
+  color: gray;
+}
+
+.active::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: orange;
+}

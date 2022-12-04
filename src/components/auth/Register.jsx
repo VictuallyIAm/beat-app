@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from './auth.module.scss'
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
 import { auth } from '../../firebase/config'
 import 'react-toastify/dist/ReactToastify.css'
 import { LoginCard } from '../cards/LoginCard'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { Loader } from '../loader/Loader'
 
@@ -16,11 +16,13 @@ export const Register = ({
   setIsLoginOpen,
   setIsRegisterOpen,
   setIsResetOpen,
+  setDisplayName,
 }) => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [Cpassword, setCpassword] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const [userName, setUserName] = useState('')
 
   const registerUser = (e) => {
     e.preventDefault()
@@ -34,9 +36,21 @@ export const Register = ({
         const user = userCredential.user
         setIsLoading(false)
         toast.success('Account created')
+        updateProfile(auth.currentUser, {
+          displayName: userName,
+        })
+          .then(() => {})
+          .catch((error) => {})
         setIsRegisterOpen(false)
-        setIsLoginOpen(true)
       })
+      .then(() => {
+        window.location.reload()
+      })
+      .catch((error) => {
+        setIsLoading(false)
+        toast.error(error.message)
+      })
+
       .catch((error) => {
         setIsLoading(false)
         toast.error(error.message)
@@ -55,11 +69,7 @@ export const Register = ({
   return (
     <>
       <ToastContainer></ToastContainer>
-      <div
-      // onClick={(e) => {
-      //   setIsRegisterOpen(false)
-      // }}
-      >
+      <div>
         <section className={`container ${styles.auth}`}>
           <LoginCard
             isLoginOpen={isLoginOpen}
@@ -79,6 +89,16 @@ export const Register = ({
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                />
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  required
+                  value={userName}
+                  onChange={(e) => {
+                    setUserName(e.target.value)
+                    setDisplayName(e.target.value)
+                  }}
                 />
                 <input
                   type="password"

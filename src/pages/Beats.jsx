@@ -1,44 +1,59 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react'
-import beats from '../data/tracks'
+import 'react-bootstrap'
 import styles from '../styles/Beats.module.css'
-import { BeatCard } from '../components/cards/BeatCard'
 import { TrackLine } from '../components/cards/TrackLine'
 import { Slider } from '../components/slider/Slider'
+import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
+import { db } from '../firebase/config'
+import { toast } from 'react-toastify'
+import { STORE_PRODUCTS } from '../redux/features/productSlice'
+import { useDispatch } from 'react-redux'
+import { BeatModal } from '../components/BeatModal'
 
 const Beats = () => {
-  const [isCardOpen, setIsCardOpen] = useState(false)
+  const [beats, setBeats] = useState([])
+  const [modalShow, setModalShow] = useState(false)
+
+  const dispatch = useDispatch
+
+  useEffect(() => {
+    getBeats()
+  }, [])
+
+  const getBeats = () => {
+    try {
+      const beatRef = collection(db, 'Beat')
+      const q = query(beatRef, orderBy('createdAt', 'desc'))
+
+      onSnapshot(q, (snapshot) => {
+        const allBeats = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }))
+        setBeats(allBeats)
+        dispatch(STORE_PRODUCTS({ products: allBeats }))
+      })
+    } catch (error) {
+      toast.error(error.message)
+    }
+  }
 
   return (
     <>
       <Slider />
-      <div className={styles.cards}>
-        <h2 className={styles.announce}> Beats of the week</h2>
-        {beats.map((beat) => {
-          return (
-            <BeatCard
-              key={beat.id}
-              title={beat.title}
-              description={beat.description}
-              src={beat.src}
-              imgSrc={beat.imgSrc}
-              duration={beat.duration}
-              // isPlaying={isPlaying}
-              isCardOpen={isCardOpen}
-            />
-          )
-        })}
-      </div>
+      <h1 id="beats"> Some text</h1>
       <div>
         {beats.map((beat) => {
           return (
             <TrackLine
+              setModalShow={setModalShow}
               key={beat.id}
               title={beat.title}
               description={beat.description}
-              src={beat.src}
+              srcUrl={beat.srcUrl}
               duration={beat.duration}
-              imgSrc={beat.imgSrc}
+              imageUrl={beat.imageUrl}
               // isPlaying={isPlaying}
             />
           )

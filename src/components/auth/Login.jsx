@@ -52,10 +52,6 @@ export const Login = ({
         toast.error(error.message)
       })
   }
-  const handleClickAway = () => {
-    setIsLoginOpen(false)
-  }
-
   const openRegister = (e) => {
     setIsRegisterOpen(true)
     setIsLoginOpen(false)

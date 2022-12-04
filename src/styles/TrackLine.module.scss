@@ -1,0 +1,83 @@
+.TrackContainer {
+  display: flex;
+  align-items: center;
+  margin: 10px, 5px;
+  height: 60px;
+  padding: 20px 20px 20px 20px;
+  background-color: rgba($color: #001018, $alpha: 0.8);
+  box-sizing: border-box;
+  border-radius: 15px;
+  color: white;
+}
+p:hover {
+  cursor: pointer;
+  color: gray;
+}
+.TrackContainer:hover {
+  background-color: rgba($color: #001018, $alpha: 0.9);
+}
+.costil {
+  width: 60%;
+}
+.trackInfoLeft {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+}
+.TrackInfoRight {
+  width: 20%;
+  right: 0;
+  margin: 20px 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.iconContainer {
+  width: 50px;
+  height: 50px;
+}
+.iconContainer img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.playIconContainer {
+  width: 20%;
+  cursor: pointer;
+}
+.titleContainer {
+  width: 60%;
+  padding: 0 10px;
+}
+.btn {
+  display: inline-block;
+  background-color: lightblue;
+  font-weight: 400;
+  margin-left: 30px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.15rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: 2px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.btn:hover {
+  cursor: pointer;
+  border: 1px solid gray;
+  background-color: #214a4a;
+}
+
+hr {
+  height: 1px;
+  background: #fff;
+  width: 100%;
+}

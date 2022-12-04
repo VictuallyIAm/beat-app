@@ -2,6 +2,9 @@ import React, { useEffect, useState } from 'react'
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import './slider.scss'
 import { sliderData } from './slider-data'
+import { Link } from 'react-router-dom'
+import { HashLink } from 'react-router-hash-link'
+import { Link as Linkto } from 'react-scroll'
 
 export const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
@@ -46,7 +49,7 @@ export const Slider = () => {
         onClick={nextSlide}
       ></AiOutlineArrowRight>
       {sliderData.map((slide, index) => {
-        const { id, image, heading, desc } = slide
+        const { id, image, heading, desc, to } = slide
         return (
           <div
             key={id}
@@ -59,9 +62,18 @@ export const Slider = () => {
                   <h2>{heading}</h2>
                   <p>{desc}</p>
                   <hr></hr>
-                  <a href="#beat" className="btn">
-                    Let's go!
-                  </a>
+                  {index === 3 && (
+                    <Linkto to="beats" className="btn">
+                      {' '}
+                      <p>Lets go</p>
+                    </Linkto>
+                  )}
+                  {index !== 3 && (
+                    <Link to={to} className="btn">
+                      {' '}
+                      Lets go
+                    </Link>
+                  )}
                 </div>
               </>
             )}

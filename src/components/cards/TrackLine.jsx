@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaPlay, FaPause } from 'react-icons/fa'
-import styles from '../../styles/TrackLine.module.css'
-import { RiShoppingBagLine } from 'react-icons/ri'
+import styles from '../../styles/TrackLine.module.scss'
+// import '../../styles/bootstrap.css'
+import { PlayPause } from '../PlayPause'
+import { BeatModal } from '../BeatModal'
 
-export const TrackLine = ({ title, description, src, imgSrc, duration }) => {
+export const TrackLine = ({
+  title,
+  description,
+  srcUrl,
+  imageUrl,
+  duration,
+}) => {
   return (
     <>
       <div className={styles.TrackContainer}>
         <div className={styles.trackInfoLeft}>
           <div className={styles.playIconContainer}>
-            <FaPlay />
+            <PlayPause />
           </div>
           <div className={styles.iconContainer}>
-            <img src={imgSrc} alt="" />
+            <img src={imageUrl} alt="logo" />
           </div>
           <div className={styles.titleContainer}>
             <p>{title}</p>
@@ -22,12 +29,10 @@ export const TrackLine = ({ title, description, src, imgSrc, duration }) => {
         <div className={styles.costil}></div>
         <div className={styles.TrackInfoRight}>
           <span>{duration}</span>
-          <button className={styles.btn}>
-            <RiShoppingBagLine />
-            {`    Buy`}
-          </button>
+          <button className={styles.btn}>{`Buy`}</button>
         </div>
       </div>
+      <hr></hr>
     </>
   )
 }

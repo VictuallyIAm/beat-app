@@ -17,6 +17,8 @@ import {
   REMOVE_ACTIVE_USER,
 } from '../redux/features/authSlice'
 import ShowOnLogin, { ShowOnLogout } from './hiddenLinks/HiddenLinks'
+import AdminOnlyRoute, { AdminOnlyLink } from './adminOnlyRoute/AdminOnlyRoute'
+import { UserDrop } from './UserDrop'
 
 const Navbar = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false)
@@ -32,8 +34,7 @@ const Navbar = () => {
           const uOne = user.email.substring(0, user.email.indexOf('@'))
           const uName = uOne.charAt(0).toUpperCase() + uOne.slice(1)
           setDisplayName(uName)
-        }
-        setDisplayName(user.displayName)
+        } else setDisplayName(user.displayName)
 
         dispatch(
           SET_ACTIVE_USER({
@@ -60,75 +61,80 @@ const Navbar = () => {
   return (
     <>
       <ToastContainer></ToastContainer>
-      <header
-        onClick={(e) => {
-          if (isResetOpen) setIsResetOpen(false)
-          if (isLoginOpen) setIsLoginOpen(false)
-          if (isRegisterOpen) setIsRegisterOpen(false)
-        }}
-      >
-        <div className={styles.header}>
-          <div className={styles.logo}>
-            <Link to="/">
-              <img src={logo} alt="logo" />
-            </Link>
-          </div>
-          <nav>
-            <div>
-              <ul>
-                <li>
-                  <NavLink
-                    to="/"
-                    className={({ isActive }) =>
-                      isActive ? `${styles.activeLink}` : ''
-                    }
-                  >
-                    Beats
-                  </NavLink>
-                </li>
-                <li>
-                  <Dropdown />
-                </li>
-                <li>
-                  <NavLink
-                    to="/about"
-                    className={({ isActive }) =>
-                      isActive ? `${styles.activeLink}` : ''
-                    }
-                  >
-                    About me
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    to="/contacts"
-                    className={({ isActive }) =>
-                      isActive ? `${styles.activeLink}` : ''
-                    }
-                  >
-                    Contact
-                  </NavLink>
-                </li>
-              </ul>
+      <div className={styles.overtop}>
+        <header
+          onClick={(e) => {
+            if (isResetOpen) setIsResetOpen(false)
+            if (isLoginOpen) setIsLoginOpen(false)
+            if (isRegisterOpen) setIsRegisterOpen(false)
+          }}
+        >
+          <div className={styles.header}>
+            <div className={styles.logo}>
+              <Link to="/">
+                <img src={logo} alt="logo" />
+              </Link>
             </div>
-          </nav>
-          <div className={styles.rightNav}>
-            <ShowOnLogout>
-              <p onClick={(e) => setIsLoginOpen(!isLoginOpen)}>
-                Sign In <BiPurchaseTag />
-              </p>
-            </ShowOnLogout>
-            <ShowOnLogin>
-              <Link>My stuff</Link>
-            </ShowOnLogin>
-            <ShowOnLogin>
-              <p onClick={userLogout}>
-                Log Out <BiPurchaseTag />
-              </p>
-            </ShowOnLogin>
+            <nav>
+              <div>
+                <ul>
+                  <li>
+                    <NavLink
+                      to="/"
+                      className={({ isActive }) =>
+                        isActive ? `${styles.activeLink}` : ''
+                      }
+                    >
+                      Beats
+                    </NavLink>
+                  </li>
+                  <li>
+                    <Dropdown />
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/about"
+                      className={({ isActive }) =>
+                        isActive ? `${styles.activeLink}` : ''
+                      }
+                    >
+                      About me
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      to="/contacts"
+                      className={({ isActive }) =>
+                        isActive ? `${styles.activeLink}` : ''
+                      }
+                    >
+                      Contact
+                    </NavLink>
+                  </li>
+                  <li>
+                    <AdminOnlyLink>
+                      <Link to="/admin/home">
+                        <button className={styles.btn}>Administrate</button>
+                      </Link>
+                    </AdminOnlyLink>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            <div className={styles.rightNav}>
+              <ShowOnLogout>
+                <p onClick={(e) => setIsLoginOpen(!isLoginOpen)}>
+                  Sign In <BiPurchaseTag />
+                </p>
+              </ShowOnLogout>
+
+              <ShowOnLogin>
+                <UserDrop userLogout={userLogout} displayName={displayName} />
+              </ShowOnLogin>
+            </div>
           </div>
-        </div>
-      </header>
+        </header>
+      </div>
       {isLoginOpen && (
         <Login
           isLoginOpen={isLoginOpen}
@@ -147,6 +153,8 @@ const Navbar = () => {
           setIsLoginOpen={setIsLoginOpen}
           setIsRegisterOpen={setIsRegisterOpen}
           setIsResetOpen={setIsResetOpen}
+          displayName={displayName}
+          setDisplayName={setDisplayName}
         />
       )}
       {isResetOpen && (
