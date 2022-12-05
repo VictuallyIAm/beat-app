@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { useState } from 'react'
 import 'react-bootstrap'
-import styles from '../styles/Beats.module.css'
+import styles from '../styles/Beats.module.scss'
 import { TrackLine } from '../components/cards/TrackLine'
 import { Slider } from '../components/slider/Slider'
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
@@ -9,11 +9,10 @@ import { db } from '../firebase/config'
 import { toast } from 'react-toastify'
 import { STORE_PRODUCTS } from '../redux/features/productSlice'
 import { useDispatch } from 'react-redux'
-import { BeatModal } from '../components/BeatModal'
+import { BsSearch } from 'react-icons/bs'
 
 const Beats = () => {
   const [beats, setBeats] = useState([])
-  const [modalShow, setModalShow] = useState(false)
 
   const dispatch = useDispatch
 
@@ -42,19 +41,35 @@ const Beats = () => {
   return (
     <>
       <Slider />
-      <h1 id="beats"> Some text</h1>
-      <div>
+      <div className={styles.search}>
+        <form className={styles.form}>
+          <div className={styles.searchForm}>
+            <input type="text" placeholder="Search for anything" />
+            <button type="submit">
+              <BsSearch size={25} />
+            </button>
+          </div>
+          <p>or</p>
+          <button className={styles.btn}>Even get more</button>
+        </form>
+      </div>
+
+      <div id="beats">
         {beats.map((beat) => {
           return (
             <TrackLine
-              setModalShow={setModalShow}
+              beats={beats}
+              beat={beat}
               key={beat.id}
+              tagOne={beat.tagOne}
+              tagTwo={beat.tagTwo}
+              bpm={beat.bpm}
+              price={beat.price}
+              index={beats.indexOf(beat)}
               title={beat.title}
               description={beat.description}
               srcUrl={beat.srcUrl}
-              duration={beat.duration}
               imageUrl={beat.imageUrl}
-              // isPlaying={isPlaying}
             />
           )
         })}

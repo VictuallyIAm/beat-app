@@ -80,6 +80,20 @@ export const AddProduct = () => {
       return productEdit.bpm
     }
   })
+  const [tagOne, setTagOne] = useState(() => {
+    if (id === 'ADD') {
+      return ''
+    } else {
+      return productEdit.tagOne
+    }
+  })
+  const [tagTwo, setTagTwo] = useState(() => {
+    if (id === 'ADD') {
+      return ''
+    } else {
+      return productEdit.TagTwo
+    }
+  })
 
   const [chooseCat, setChooseCat] = useState(false)
 
@@ -104,6 +118,14 @@ export const AddProduct = () => {
   const handleDescriptionChange = (e) => {
     e.preventDefault()
     setDescription(e.target.value)
+  }
+  const handleTagOneChange = (e) => {
+    e.preventDefault()
+    setTagOne(e.target.value)
+  }
+  const handleTagTwoChange = (e) => {
+    e.preventDefault()
+    setTagTwo(e.target.value)
   }
   const handleBpmChange = (e) => {
     e.preventDefault()
@@ -167,6 +189,8 @@ export const AddProduct = () => {
         srcUrl: srcUrl,
         description: description,
         bpm: Number(bpm),
+        tagOne: tagOne,
+        tagTwo: tagTwo,
         createdAt: Timestamp.now().toDate(),
       })
       setIsLoading(false)
@@ -177,6 +201,8 @@ export const AddProduct = () => {
       setSrcUrl('')
       setDescription('')
       setBpm('')
+      setTagOne('')
+      setTagTwo('')
       setImageUploadProgress(0)
       setSrcUploadProgress(0)
       toast.success('Uploaded successfully!')
@@ -209,6 +235,8 @@ export const AddProduct = () => {
         srcUrl: srcUrl,
         description: description,
         bpm: Number(bpm),
+        tagOne: tagOne,
+        tagTwo: tagTwo,
         createdAt: productEdit.createdAt,
         editedAt: Timestamp.now().toDate(),
       })
@@ -331,6 +359,24 @@ export const AddProduct = () => {
                 name="bpm"
                 value={bpm}
                 onChange={(e) => handleBpmChange(e)}
+              ></input>
+              <label>Add first tag:</label>
+              <input
+                type="text"
+                placeholder="tag1"
+                required={true}
+                name="tagOne"
+                value={tagOne}
+                onChange={(e) => handleTagOneChange(e)}
+              ></input>
+              <label>Add second tag:</label>
+              <input
+                type="text"
+                placeholder="tag2"
+                required={true}
+                name="tagTwo"
+                value={tagTwo}
+                onChange={(e) => handleTagTwoChange(e)}
               ></input>
               <label>Add description:</label>
               <textarea

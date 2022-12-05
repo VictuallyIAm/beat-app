@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import styles from '../styles/Beats.module.css'
+import styles from '../styles/Beats.module.scss'
 import { BeatCard } from '../components/cards/BeatCard'
 import { useDispatch } from 'react-redux'
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { db } from '../firebase/config'
 import { STORE_PRODUCTS } from '../redux/features/productSlice'
-import { BeatModal } from '../components/BeatModal'
 
 const Samples = () => {
   const [samples, setSamples] = useState([])
@@ -34,7 +33,7 @@ const Samples = () => {
   }
 
   return (
-    <div id="samples">
+    <div className={styles.lorem}>
       <div>
         <div className={styles.cards}>
           {samples.map((sample) => {

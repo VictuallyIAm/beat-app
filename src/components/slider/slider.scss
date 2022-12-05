@@ -1,6 +1,6 @@
 .slider {
   width: 100%;
-  height: 90vh;
+  height: 45vh;
   position: relative;
   overflow: hidden;
   background-color: var(--color-dark);
@@ -57,18 +57,18 @@
 .content {
   position: absolute;
   text-align: center;
-  margin-top: -10%;
+  margin-top: -20%;
   top: 23rem;
   left: 50%;
   opacity: 0;
-  width: 40%;
-  padding: 2rem;
+  width: 60%;
+  padding: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
   animation: slide-up 1s ease 0.5s;
   animation-fill-mode: forwards;
   //   visibility: hidden;
@@ -118,7 +118,7 @@
   cursor: pointer;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-20%);
   z-index: 2;
 }
 

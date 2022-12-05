@@ -132,14 +132,25 @@ export const ViewProducts = () => {
                   <th>Image</th>
                   <th>Title</th>
                   <th>BPM</th>
+                  <th>Tag</th>
+                  <th>Tag</th>
                   <th>Price</th>
                   <th>Actions</th>
                 </tr>
               </thead>
               <tbody>
                 {products.map((product, index) => {
-                  const { id, title, price, imageUrl, bpm, srcUrl, category } =
-                    product
+                  const {
+                    id,
+                    title,
+                    price,
+                    imageUrl,
+                    bpm,
+                    tagOne,
+                    tagTwo,
+                    srcUrl,
+                    category,
+                  } = product
                   return (
                     <tr key={id}>
                       <td style={{ width: '5%' }}>
@@ -154,6 +165,8 @@ export const ViewProducts = () => {
                       </td>
                       <td>{title}</td>
                       <td>{bpm}</td>
+                      <td>{tagOne}</td>
+                      <td>{tagTwo}</td>
                       <td>{`$${price}`}</td>
                       <td className={styles.actions}>
                         <Link to={`/admin/addproduct/${id}`}>

@@ -57,15 +57,22 @@ export const Slider = () => {
           >
             {index === currentSlide && (
               <>
-                <img src={image} alt="slide" />
+                {/* <img src={image} alt="slide" /> */}
                 <div className="content">
                   <h2>{heading}</h2>
                   <p>{desc}</p>
                   <hr></hr>
                   {index === 3 && (
-                    <Linkto to="beats" className="btn">
+                    <Linkto
+                      to="beats"
+                      spy={true}
+                      smooth={true}
+                      offset={-70}
+                      duration={500}
+                      className="btn"
+                    >
                       {' '}
-                      <p>Lets go</p>
+                      Lets go
                     </Linkto>
                   )}
                   {index !== 3 && (

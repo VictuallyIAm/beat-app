@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { db } from '../firebase/config'
 import { STORE_PRODUCTS } from '../redux/features/productSlice'
-import styles from '../styles/Beats.module.css'
+import styles from '../styles/Beats.module.scss'
 import { BeatCard } from '../components/cards/BeatCard'
 
 const Sounds = () => {
@@ -31,7 +31,7 @@ const Sounds = () => {
     } catch (error) {}
   }
   return (
-    <div id="sounds">
+    <div className={styles.lorem}>
       <div>
         <div className={styles.cards}>
           {sounds.map((sound) => {

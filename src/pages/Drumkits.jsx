@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux'
 import { BeatCard } from '../components/cards/BeatCard'
 import { db } from '../firebase/config'
 import { STORE_PRODUCTS } from '../redux/features/productSlice'
-import styles from '../styles/Beats.module.css'
+import styles from '../styles/Beats.module.scss'
 
 const Drumkits = () => {
   const [kits, setKits] = useState([])
@@ -33,7 +33,7 @@ const Drumkits = () => {
 
   return (
     <div>
-      <div id="kits">
+      <div className={styles.lorem}>
         <div className={styles.cards}>
           {kits.map((kit) => {
             return (
