@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../../styles/SingleBeat.module.scss'
 import { PlayPause } from '../PlayPause'
-import { HiOutlineMusicNote } from 'react-icons/hi'
 import { MdDateRange } from 'react-icons/md'
 import { Visualizer } from '../Visualizer'
 
