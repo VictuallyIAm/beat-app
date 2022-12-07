@@ -1,0 +1,95 @@
+.header {
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin: 20px;
+  padding: 10px;
+}
+
+.img {
+  padding-right: 10px;
+  height: 180px;
+  width: 180px;
+}
+.title {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 15px;
+
+  div {
+    margin-left: 10px;
+    font-size: 40px;
+  }
+}
+
+.addInfo {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 5px;
+  padding-left: 15px;
+
+  div {
+    margin-left: 5px;
+    margin-right: 20px;
+  }
+}
+
+.description {
+  color: white;
+  font-size: 18px;
+  padding-left: 15px;
+}
+.buttons {
+  padding-left: 15px;
+}
+
+.btnTwo {
+  display: inline-block;
+  background-color: lightblue;
+  color: black;
+  font-weight: 400;
+  margin-left: 5px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: 0.15rem 0.75rem;
+  font-size: 1.3rem;
+  line-height: 1.5;
+  border-radius: 2px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  div {
+    padding: 6px;
+    margin: 5px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+      color: gray;
+    }
+  }
+}
+
+.lastLine {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

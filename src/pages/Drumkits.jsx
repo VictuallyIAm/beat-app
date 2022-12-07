@@ -8,7 +8,7 @@ import styles from '../styles/Beats.module.scss'
 
 const Drumkits = () => {
   const [kits, setKits] = useState([])
-  const [isCardOpen, setIsCardOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const Drumkits = () => {
   }, [])
 
   const getKits = () => {
+    setIsLoading(true)
     try {
       const kitRef = collection(db, 'Kit')
       const q = query(kitRef, orderBy('createdAt', 'desc'))
@@ -26,9 +27,12 @@ const Drumkits = () => {
           ...doc.data(),
         }))
         setKits(allKits)
+        setIsLoading(false)
         dispatch(STORE_PRODUCTS({ products: allKits }))
       })
-    } catch (error) {}
+    } catch (error) {
+      setIsLoading(false)
+    }
   }
 
   return (
@@ -38,14 +42,18 @@ const Drumkits = () => {
           {kits.map((kit) => {
             return (
               <BeatCard
-                key={kits.id}
-                title={kits.title}
-                description={kits.description}
-                src={kits.srcUrl}
-                imgSrc={kits.imageUrl}
-                duration={kits.duration}
-                // isPlaying={isPlaying}
-                // isCardOpen={isCardOpen}
+                songs={kits}
+                song={kit}
+                price={kit.price}
+                index={kits.indexOf(kit)}
+                tagOne={kit.tagOne}
+                tagTwo={kit.tagTwo}
+                key={kit.id}
+                title={kit.title}
+                description={kit.description}
+                src={kit.srcUrl}
+                imageUrl={kit.imageUrl}
+                createdAt={kit.createdAt}
               />
             )
           })}

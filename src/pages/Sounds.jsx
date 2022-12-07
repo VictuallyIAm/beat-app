@@ -8,7 +8,7 @@ import { BeatCard } from '../components/cards/BeatCard'
 
 const Sounds = () => {
   const [sounds, setSounds] = useState([])
-  const [isCardOpen, setIsCardOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const dispatch = useDispatch()
 
   useEffect(() => {
@@ -16,6 +16,7 @@ const Sounds = () => {
   }, [])
 
   const getSounds = () => {
+    setIsLoading(true)
     try {
       const soundRef = collection(db, 'Sound')
       const q = query(soundRef, orderBy('createdAt', 'desc'))
@@ -26,9 +27,12 @@ const Sounds = () => {
           ...doc.data(),
         }))
         setSounds(allSounds)
+        setIsLoading(false)
         dispatch(STORE_PRODUCTS({ products: allSounds }))
       })
-    } catch (error) {}
+    } catch (error) {
+      setIsLoading(false)
+    }
   }
   return (
     <div className={styles.lorem}>
@@ -37,14 +41,18 @@ const Sounds = () => {
           {sounds.map((sound) => {
             return (
               <BeatCard
-                key={sounds.id}
-                title={sounds.title}
-                description={sounds.description}
-                src={sounds.srcUrl}
-                imgSrc={sounds.imageUrl}
-                duration={sounds.duration}
-                // isPlaying={isPlaying}
-                // isCardOpen={isCardOpen}
+                songs={sounds}
+                song={sound}
+                price={sound.price}
+                index={sounds.indexOf(sound)}
+                tagOne={sound.tagOne}
+                tagTwo={sound.tagTwo}
+                key={sound.id}
+                title={sound.title}
+                description={sound.description}
+                src={sound.srcUrl}
+                imageUrl={sound.imageUrl}
+                createdAt={sound.createdAt}
               />
             )
           })}

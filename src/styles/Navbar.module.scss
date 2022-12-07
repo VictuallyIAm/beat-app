@@ -3,8 +3,9 @@ header {
   background: linear-gradient(#09072b, #010f18);
   background: linear-gradient(to right, #011b28, #09072b 40%, #273132);
   color: #fff;
-  // position: fixed;
-  // z-index: 999;
+  position: sticky;
+  z-index: 999;
+  width: 100%;
 
   .header {
     height: 60px;

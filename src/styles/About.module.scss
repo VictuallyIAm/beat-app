@@ -1,0 +1,39 @@
+.body {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgba($color: #000000, $alpha: 0.6);
+}
+
+.image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  border: 2px solig gray;
+
+  img {
+    max-width: 70%;
+    max-height: 70%;
+    border-radius: 25px;
+  }
+}
+
+.description {
+  width: 50%;
+  color: white;
+}
+.left {
+  width: 66%;
+  display: flex;
+  align-items: center;
+}
+.right {
+  font-size: 32px;
+  font-weight: 300;
+  padding-left: 100px;
+  color: white;
+  width: 33%;
+}

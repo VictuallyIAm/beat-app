@@ -36,6 +36,8 @@ export const AddProduct = () => {
   const products = useSelector(selectProducts)
   const productEdit = products.find((item) => item.id === id)
 
+  const [activeButton, setActiveButton] = useState(false)
+
   const [title, setTitle] = useState(() => {
     if (id === 'ADD') {
       return ''
@@ -91,7 +93,14 @@ export const AddProduct = () => {
     if (id === 'ADD') {
       return ''
     } else {
-      return productEdit.TagTwo
+      return productEdit.tagTwo
+    }
+  })
+  const [tagThree, setTagThree] = useState(() => {
+    if (id === 'ADD') {
+      return ''
+    } else {
+      return productEdit.tagThree
     }
   })
 
@@ -126,6 +135,10 @@ export const AddProduct = () => {
   const handleTagTwoChange = (e) => {
     e.preventDefault()
     setTagTwo(e.target.value)
+  }
+  const handleTagThreeChange = (e) => {
+    e.preventDefault()
+    setTagThree(e.target.value)
   }
   const handleBpmChange = (e) => {
     e.preventDefault()
@@ -191,6 +204,7 @@ export const AddProduct = () => {
         bpm: Number(bpm),
         tagOne: tagOne,
         tagTwo: tagTwo,
+        tagThree: tagThree,
         createdAt: Timestamp.now().toDate(),
       })
       setIsLoading(false)
@@ -203,6 +217,7 @@ export const AddProduct = () => {
       setBpm('')
       setTagOne('')
       setTagTwo('')
+      setTagThree('')
       setImageUploadProgress(0)
       setSrcUploadProgress(0)
       toast.success('Uploaded successfully!')
@@ -237,6 +252,7 @@ export const AddProduct = () => {
         bpm: Number(bpm),
         tagOne: tagOne,
         tagTwo: tagTwo,
+        tagThree: tagThree,
         createdAt: productEdit.createdAt,
         editedAt: Timestamp.now().toDate(),
       })
@@ -311,6 +327,7 @@ export const AddProduct = () => {
                 {imageUrl === '' ? null : (
                   <input
                     type="text"
+                    required={true}
                     name="imageUrl"
                     disabled
                     value={imageUrl}
@@ -339,7 +356,13 @@ export const AddProduct = () => {
                   onChange={(e) => handleSrcChange(e)}
                 />
                 {srcUrl === '' ? null : (
-                  <input type="text" name="srcUrl" disabled value={srcUrl} />
+                  <input
+                    type="text"
+                    name="srcUrl"
+                    required={true}
+                    disabled
+                    value={srcUrl}
+                  />
                 )}
               </Card>
               <label>Add price:</label>
@@ -377,6 +400,15 @@ export const AddProduct = () => {
                 name="tagTwo"
                 value={tagTwo}
                 onChange={(e) => handleTagTwoChange(e)}
+              ></input>
+              <label>Add third tag:</label>
+              <input
+                type="text"
+                placeholder="tag3"
+                required={true}
+                name="tagThree"
+                value={tagThree}
+                onChange={(e) => handleTagThreeChange(e)}
               ></input>
               <label>Add description:</label>
               <textarea

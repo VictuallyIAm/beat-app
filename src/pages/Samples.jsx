@@ -5,18 +5,19 @@ import { useDispatch } from 'react-redux'
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore'
 import { db } from '../firebase/config'
 import { STORE_PRODUCTS } from '../redux/features/productSlice'
+import { Loader } from '../components/loader/Loader'
 
 const Samples = () => {
   const [samples, setSamples] = useState([])
-  const [isCardOpen, setIsCardOpen] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
   const dispatch = useDispatch()
-  const [modalShow, setModalShow] = React.useState(false)
 
   useEffect(() => {
     getSamples()
   }, [])
 
   const getSamples = () => {
+    setIsLoading(true)
     try {
       const sampleRef = collection(db, 'Sample')
       const q = query(sampleRef, orderBy('createdAt', 'desc'))
@@ -27,32 +28,43 @@ const Samples = () => {
           ...doc.data(),
         }))
         setSamples(allSamples)
+        setIsLoading(false)
         dispatch(STORE_PRODUCTS({ products: allSamples }))
       })
-    } catch (error) {}
+    } catch (error) {
+      setIsLoading(false)
+    }
   }
 
   return (
-    <div className={styles.lorem}>
-      <div>
-        <div className={styles.cards}>
-          {samples.map((sample) => {
-            return (
-              <BeatCard
-                key={samples.id}
-                title={samples.title}
-                description={samples.description}
-                src={samples.srcUrl}
-                imgSrc={samples.imageUrl}
-                duration={samples.duration}
-                // isPlaying={isPlaying}
-                // isCardOpen={isCardOpen}
-              />
-            )
-          })}
+    <>
+      {isLoading && <Loader />}
+      <div className={styles.lorem}>
+        <div>
+          <div className={styles.cards}>
+            {samples.map((sample) => {
+              return (
+                <BeatCard
+                  songs={samples}
+                  song={sample}
+                  price={sample.price}
+                  index={samples.indexOf(sample)}
+                  tagOne={sample.tagOne}
+                  tagTwo={sample.tagTwo}
+                  tagThree={sample.tagThree}
+                  key={sample.id}
+                  title={sample.title}
+                  description={sample.description}
+                  srcUrl={sample.srcUrl}
+                  imageUrl={sample.imageUrl}
+                  createdAt={sample.createdAt}
+                />
+              )
+            })}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
 

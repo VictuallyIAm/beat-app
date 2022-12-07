@@ -7,7 +7,6 @@ import {
   query,
 } from 'firebase/firestore'
 import React, { useEffect, useState } from 'react'
-import { PlayPause } from '../../PlayPause'
 import { Link } from 'react-router-dom'
 import { FaEdit, FaTrashAlt } from 'react-icons/fa'
 import { toast } from 'react-toastify'
@@ -97,6 +96,7 @@ export const ViewProducts = () => {
 
   return (
     <>
+      {isLoading && <Loader />}
       <div className={styles.products}>
         <div className={styles.table}>
           <div className={styles.tableHead}>
@@ -121,7 +121,7 @@ export const ViewProducts = () => {
               })}
             </select>
           </div>
-          {isLoading && <Loader />}
+
           {products.length === 0 ? (
             <p> Fetching stuff...</p>
           ) : (
@@ -153,14 +153,12 @@ export const ViewProducts = () => {
                   } = product
                   return (
                     <tr key={id}>
-                      <td style={{ width: '5%' }}>
-                        <PlayPause />
-                      </td>
-                      <td style={{ width: '20%' }}>
+                      <td style={{ width: '5%' }}>{index + 1}</td>
+                      <td style={{ width: '50px' }}>
                         <img
                           src={imageUrl}
                           alt={title}
-                          style={{ width: '100%', height: '50px' }}
+                          style={{ width: '50px ', height: '50px' }}
                         />
                       </td>
                       <td>{title}</td>

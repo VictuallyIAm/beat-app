@@ -102,11 +102,11 @@
   cursor: pointer;
   color: white;
   background-color: #0b5ed7;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: all 0.3s;
-  width: 100%;
+  width: 50%;
   height: 25px;
   &:hover {
     background-color: #0d6efd;

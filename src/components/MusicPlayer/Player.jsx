@@ -31,6 +31,7 @@ const Player = ({
 
   return (
     <audio
+      id="activeAudio"
       src={activeSong?.srcUrl}
       ref={ref}
       loop={repeat}

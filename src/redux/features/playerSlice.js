@@ -54,4 +54,6 @@ const playerSlice = createSlice({
 export const { setActiveSong, nextSong, prevSong, playPause, setCurrentSongs } =
   playerSlice.actions
 
+export const selectActiveSong = (state) => state.player.activeSong
+
 export default playerSlice.reducer

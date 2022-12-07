@@ -112,6 +112,16 @@ const Navbar = () => {
                     </NavLink>
                   </li>
                   <li>
+                    <NavLink
+                      to="/licensing"
+                      className={({ isActive }) =>
+                        isActive ? `${styles.activeLink}` : ''
+                      }
+                    >
+                      Lisense
+                    </NavLink>
+                  </li>
+                  <li>
                     <AdminOnlyLink>
                       <Link to="/admin/home">
                         <button className={styles.btn}>Administrate</button>

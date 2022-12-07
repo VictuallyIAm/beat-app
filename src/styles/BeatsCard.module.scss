@@ -31,20 +31,21 @@
 }
 
 .card {
-  width: 180px;
-  height: 270px;
+  width: 230px;
+  height: 350px;
   background-color: #080e0e;
   position: relative;
   justify-self: center;
   border: 1px solid #85858554;
   border-radius: 4px;
-  cursor: pointer;
+  // cursor: pointer;
   overflow: hidden;
   transition: border 0.2s ease;
   margin-bottom: 10px;
   z-index: 1;
 }
 .card img {
+  cursor: pointer;
   max-height: 70%;
   min-width: 90%;
   padding: 10px;
@@ -55,17 +56,17 @@
 .card:hover img {
   transform: scale(1.1);
 }
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: #00000062;
-  display: grid;
-  place-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  color: #fff;
-  z-index: 2;
-}
+// .overlay {
+//   position: absolute;
+//   inset: 0;
+//   background: #00000062;
+//   display: grid;
+//   place-content: center;
+//   opacity: 0;
+//   transition: opacity 0.4s ease;
+//   color: #fff;
+//   z-index: 2;
+// }
 .card:hover {
   border: 1px solid #c7c7c7;
 }
@@ -74,8 +75,24 @@
 }
 .trackDescription {
   color: white;
-  margin-top: -20px;
-  padding-left: 20px;
+  margin-top: 5px;
+  padding-left: 15px;
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  p {
+    margin-left: 20px;
+    cursor: pointer;
+    &:hover {
+      color: gray;
+    }
+  }
+  button {
+    margin-left: 10px;
+  }
 }
 .play {
   width: 60px;
@@ -86,7 +103,7 @@
   place-content: center;
   cursor: default;
 
-  opacity: 0;
+  opacity: 1;
   transform: scale(0);
   transition: all 0.4s ease 0.15s;
 }
@@ -96,4 +113,25 @@
 .card:hover > .overlay .play {
   opacity: 1;
   transform: scale(1);
+}
+.btn {
+  font-size: 0.7rem;
+  font-weight: 400;
+  padding: 6px 6px;
+  width: 40%;
+  height: 30px;
+  margin: 20px 0px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  color: white;
+  background-color: #0b5ed7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #0d6efd;
+    transform: translateY(-8%);
+  }
 }

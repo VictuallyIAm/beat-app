@@ -13,6 +13,7 @@ import { ToastContainer } from 'react-toastify'
 import Admin from './pages/Admin'
 import AdminOnlyRoute from './components/adminOnlyRoute/AdminOnlyRoute'
 import { useSelector } from 'react-redux'
+import License from './pages/License'
 
 function App() {
   const { activeSong } = useSelector((state) => state.player)
@@ -28,6 +29,7 @@ function App() {
             <Route path="drumkits" element={<Drumkits />} />
             <Route path="sounds" element={<Sounds />} />
             <Route path="samples" element={<Samples />} />
+            <Route path="licensing" element={<License />} />
 
             <Route
               path="admin/*"
