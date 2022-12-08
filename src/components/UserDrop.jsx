@@ -22,7 +22,7 @@ export const UserDrop = ({ displayName, userLogout }) => {
             className={styles.dropdowmItem}
             onClick={(e) => setIsOpen(false)}
           >
-            <Link>My stuff</Link>
+            <Link>My cart</Link>
           </div>
           <div
             className={styles.dropdowmItem}

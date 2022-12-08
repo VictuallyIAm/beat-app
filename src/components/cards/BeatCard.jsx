@@ -25,6 +25,7 @@ export const BeatCard = ({
     <>
       <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
         <SingleEff
+          isModalOpen={isModalOpen}
           songs={songs}
           song={song}
           tagOne={tagOne}

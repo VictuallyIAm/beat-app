@@ -18,11 +18,6 @@ export const AdminNavbar = () => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/admin/home" className={activeLink}>
-              Home
-            </NavLink>
-          </li>
-          <li>
             <NavLink to="/admin/viewproducts" className={activeLink}>
               View products
             </NavLink>

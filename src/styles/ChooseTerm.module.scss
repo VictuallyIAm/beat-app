@@ -1,0 +1,95 @@
+.head {
+  display: flex;
+  justify-content: flex-start;
+
+  h1 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+}
+.terms {
+  padding: 10px;
+  display: flex;
+  background-color: rgba($color: #000e16, $alpha: 0.7);
+  width: 900px;
+  color: white;
+}
+
+.left {
+  padding-left: 10px;
+  top: 0;
+  display: block;
+  width: 30%;
+  font-size: 20px;
+  font-weight: 500;
+  img {
+    border-radius: 10px;
+    max-width: 200px;
+    max-height: 200px;
+  }
+  div {
+    display: flex;
+    justify-content: flex-start;
+  }
+  span {
+    color: gray;
+    font-size: 18px;
+  }
+}
+
+.right {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 70%;
+  .term {
+    background-color: rgba($color: #00090e, $alpha: 1);
+    margin: 5px 0;
+    padding: 7px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    div {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+    h2 {
+      font-size: 24px;
+      padding-left: 0;
+    }
+    h3 {
+      color: gray;
+    }
+    a {
+      margin-top: 30px;
+      color: gray;
+      text-decoration: underline;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+}
+.btn {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 7px 30px;
+  margin: 5px 0px 10px 0;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  cursor: pointer;
+  color: black;
+  background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s;
+  width: 100%;
+  &:hover {
+    background-color: gray;
+    transform: translateY(-8%);
+  }
+}

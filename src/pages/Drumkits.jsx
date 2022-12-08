@@ -51,7 +51,7 @@ const Drumkits = () => {
                 key={kit.id}
                 title={kit.title}
                 description={kit.description}
-                src={kit.srcUrl}
+                srcUrl={kit.srcUrl}
                 imageUrl={kit.imageUrl}
                 createdAt={kit.createdAt}
               />

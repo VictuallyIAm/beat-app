@@ -1,11 +1,11 @@
 import React, { useRef, useState } from 'react'
-import { saveAs } from 'file-saver'
 import { getStorage, ref, getDownloadURL } from 'firebase/storage'
 import { BsDownload, BsShare } from 'react-icons/bs'
 import styles from '../../styles/TrackLine.module.scss'
 import { PlayPause } from '../PlayPause'
 import Modal from '../Modal'
 import SingleBeat from './SingleBeat'
+import ChooseTerm from './ChooseTerm'
 
 export const TrackLine = (props) => {
   const {
@@ -25,7 +25,8 @@ export const TrackLine = (props) => {
     id,
     createdAt,
   } = props
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isModalOneOpen, setIsModalOneOpen] = useState(false)
+  const [isModalTwoOpen, setIsModalTwoOpen] = useState(false)
 
   const download = (url) => {
     const storage = getStorage()
@@ -56,7 +57,7 @@ export const TrackLine = (props) => {
           </div>
           <div
             className={styles.titleContainer}
-            onClick={() => setIsModalOpen(true)}
+            onClick={() => setIsModalOneOpen(true)}
           >
             <p>{title}</p>
           </div>
@@ -78,14 +79,20 @@ export const TrackLine = (props) => {
           <button className={styles.btn}>
             <BsShare size={25} />
           </button>
-          <button className={styles.btn} onClick={download}>
+          {/* <button className={styles.btn} onClick={download}>
             <BsDownload size={25} />
+          </button> */}
+          <button
+            className={styles.btnTwo}
+            onClick={() => setIsModalTwoOpen(true)}
+          >
+            $19.95
           </button>
-          <button className={styles.btnTwo}>${price}</button>
         </div>
       </div>
-      <Modal isModalOpen={isModalOpen} setIsModalOpen={setIsModalOpen}>
+      <Modal isModalOpen={isModalOneOpen} setIsModalOpen={setIsModalOneOpen}>
         <SingleBeat
+          isModalOpen={isModalOneOpen}
           beats={beats}
           beat={beat}
           tagOne={tagOne}
@@ -99,6 +106,9 @@ export const TrackLine = (props) => {
           imageUrl={imageUrl}
           createdAt={createdAt}
         />
+      </Modal>
+      <Modal isModalOpen={isModalTwoOpen} setIsModalOpen={setIsModalTwoOpen}>
+        <ChooseTerm title={title} imageUrl={imageUrl} />
       </Modal>
     </>
   )

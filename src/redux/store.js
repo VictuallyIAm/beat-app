@@ -1,5 +1,4 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
-import { getDefaultMiddleware } from '@reduxjs/toolkit'
 import authReducer from './features/authSlice'
 import playerReducer from './features/playerSlice'
 import productReducer from './features/productSlice'
