@@ -52,11 +52,33 @@ export const AddProduct = () => {
       return productEdit.imageUrl
     }
   })
-  const [price, setPrice] = useState(() => {
+
+  const [priceBasic, setPriceBasic] = useState(() => {
     if (id === 'ADD') {
       return ''
     } else {
-      return productEdit.price
+      return productEdit.priceBasic
+    }
+  })
+  const [priceBasicPro, setPriceBasicPro] = useState(() => {
+    if (id === 'ADD') {
+      return ''
+    } else {
+      return productEdit.priceBasicPro
+    }
+  })
+  const [priceUnlimited, setPriceUnlimited] = useState(() => {
+    if (id === 'ADD') {
+      return ''
+    } else {
+      return productEdit.priceUnlimited
+    }
+  })
+  const [priceExclusive, setPriceExclusive] = useState(() => {
+    if (id === 'ADD') {
+      return ''
+    } else {
+      return productEdit.priceExclusive
     }
   })
   const [category, setCategory] = useState('')
@@ -112,9 +134,21 @@ export const AddProduct = () => {
   const [srcUploadProgress, setSrcUploadProgress] = useState(0)
   const [isLoading, setIsLoading] = useState(false)
 
-  const handlePriceChange = (e) => {
+  const handlePriceBasicChange = (e) => {
     e.preventDefault()
-    setPrice(e.target.value)
+    setPriceBasic(e.target.value)
+  }
+  const handlePriceBasicProChange = (e) => {
+    e.preventDefault()
+    setPriceBasicPro(e.target.value)
+  }
+  const handlePriceUnlimitedChange = (e) => {
+    e.preventDefault()
+    setPriceUnlimited(e.target.value)
+  }
+  const handlePriceExclusiveChange = (e) => {
+    e.preventDefault()
+    setPriceExclusive(e.target.value)
   }
   const handleTitleChange = (e) => {
     e.preventDefault()
@@ -197,7 +231,10 @@ export const AddProduct = () => {
       const docRef = addDoc(collection(db, `${category}`), {
         title: title,
         imageUrl: imageUrl,
-        price: Number(price),
+        priceBasic: Number(priceBasic),
+        priceBasicPro: Number(priceBasicPro),
+        priceUnlimited: Number(priceUnlimited),
+        priceExclusive: Number(priceExclusive),
         category: category,
         srcUrl: srcUrl,
         description: description,
@@ -210,7 +247,10 @@ export const AddProduct = () => {
       setIsLoading(false)
       setTitle('')
       setImageUrl('')
-      setPrice('')
+      setPriceBasic('')
+      setPriceBasicPro('')
+      setPriceUnlimited('')
+      setPriceExclusive('')
       setCategory('')
       setSrcUrl('')
       setDescription('')
@@ -245,7 +285,10 @@ export const AddProduct = () => {
       setDoc(doc(db, `${category}`, id), {
         title: title,
         imageUrl: imageUrl,
-        price: Number(price),
+        priceBasic: Number(priceBasic),
+        priceBasicPro: Number(priceBasicPro),
+        priceUnlimited: Number(priceUnlimited),
+        priceExclusive: Number(priceExclusive),
         category: category,
         srcUrl: srcUrl,
         description: description,
@@ -365,14 +408,38 @@ export const AddProduct = () => {
                   />
                 )}
               </Card>
-              <label>Add price:</label>
+              <label>Add price for BASIC:</label>
               <input
                 type="number"
-                placeholder="Price"
+                placeholder="PriceBasic"
                 required={true}
-                name="price"
-                value={price}
-                onChange={(e) => handlePriceChange(e)}
+                name="priceBasic"
+                value={priceBasic}
+                onChange={(e) => handlePriceBasicChange(e)}
+              ></input>
+              <label>Add price for BASIC PRO:</label>
+              <input
+                type="number"
+                placeholder="Only for beats"
+                name="priceBasicPro"
+                value={priceBasicPro}
+                onChange={(e) => handlePriceBasicProChange(e)}
+              ></input>
+              <label>Add price for UNLIMITED:</label>
+              <input
+                type="number"
+                placeholder="Only for beats"
+                name="PriceUnlimited"
+                value={priceUnlimited}
+                onChange={(e) => handlePriceUnlimitedChange(e)}
+              ></input>
+              <label>Add price for EXCLUSIVE:</label>
+              <input
+                type="number"
+                placeholder="Only for beats"
+                name="PriceExclusive"
+                value={priceExclusive}
+                onChange={(e) => handlePriceExclusiveChange(e)}
               ></input>
               <label>Add bpm:</label>
               <input
@@ -386,8 +453,7 @@ export const AddProduct = () => {
               <label>Add first tag:</label>
               <input
                 type="text"
-                placeholder="tag1"
-                required={true}
+                placeholder="Only for beats"
                 name="tagOne"
                 value={tagOne}
                 onChange={(e) => handleTagOneChange(e)}
@@ -395,8 +461,7 @@ export const AddProduct = () => {
               <label>Add second tag:</label>
               <input
                 type="text"
-                placeholder="tag2"
-                required={true}
+                placeholder="Only for beats"
                 name="tagTwo"
                 value={tagTwo}
                 onChange={(e) => handleTagTwoChange(e)}
@@ -404,8 +469,7 @@ export const AddProduct = () => {
               <label>Add third tag:</label>
               <input
                 type="text"
-                placeholder="tag3"
-                required={true}
+                placeholder="Only for beats"
                 name="tagThree"
                 value={tagThree}
                 onChange={(e) => handleTagThreeChange(e)}

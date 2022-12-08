@@ -1,8 +1,22 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
+import { ADD_TO_CART } from '../../redux/features/cartSlice'
 import styles from '../../styles/ChooseTerm.module.scss'
 
-const ChooseTerm = ({ title, imageUrl }) => {
+const ChooseTerm = ({
+  title,
+  imageUrl,
+  beat,
+  priceBasic,
+  priceBasicPro,
+  priceUnlimited,
+  priceExclusive,
+}) => {
+  const dispatch = useDispatch()
+  const addToCart = (item, price, license) => {
+    dispatch(ADD_TO_CART({ item, price, license }))
+  }
   return (
     <>
       <div className={styles.head}>
@@ -22,7 +36,12 @@ const ChooseTerm = ({ title, imageUrl }) => {
               <Link to="/licensing">Learn more about usage terms</Link>
             </div>
             <div>
-              <button className={styles.btn}>$19.95</button>
+              <button
+                className={styles.btn}
+                onClick={() => addToCart(beat, priceBasic, 'Basic')}
+              >
+                ${priceBasic}
+              </button>
             </div>
           </div>
           <div className={styles.term}>
@@ -32,7 +51,12 @@ const ChooseTerm = ({ title, imageUrl }) => {
               <Link to="/licensing">Learn more about usage terms</Link>
             </div>
             <div>
-              <button className={styles.btn}>$29.95</button>
+              <button
+                className={styles.btn}
+                onClick={() => addToCart(beat, priceBasicPro, 'BasicPRO')}
+              >
+                ${priceBasicPro}
+              </button>
             </div>
           </div>
           <div className={styles.term}>
@@ -42,7 +66,12 @@ const ChooseTerm = ({ title, imageUrl }) => {
               <Link to="/licensing">Learn more about usage terms</Link>
             </div>
             <div>
-              <button className={styles.btn}>$74.99</button>
+              <button
+                className={styles.btn}
+                onClick={() => addToCart(beat, priceUnlimited, 'Unlimited')}
+              >
+                ${priceUnlimited}
+              </button>
             </div>
           </div>
           <div className={styles.term}>
@@ -52,7 +81,12 @@ const ChooseTerm = ({ title, imageUrl }) => {
               <Link to="/licensing">Learn more about usage terms</Link>
             </div>
             <div>
-              <button className={styles.btn}>$244.99</button>
+              <button
+                className={styles.btn}
+                onClick={() => addToCart(beat, priceExclusive, 'Exclusive')}
+              >
+                ${priceExclusive}
+              </button>
             </div>
           </div>
         </div>

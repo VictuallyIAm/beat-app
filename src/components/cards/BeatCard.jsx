@@ -31,7 +31,6 @@ export const BeatCard = ({
           tagOne={tagOne}
           tagTwo={tagTwo}
           tagThree={tagThree}
-          // bpm={bpm}
           price={price}
           title={title}
           description={description}
@@ -49,8 +48,12 @@ export const BeatCard = ({
               <p onClick={() => setIsModalOpen(true)}>{`${title}`}</p>
             </div>
             <div className={styles.title}>
-              <button className={styles.btn}>${price}</button>
-              <button className={styles.btn}>Add</button>
+              <button
+                className={styles.btn}
+                onClick={() => setIsModalOpen(true)}
+              >
+                ${price}
+              </button>
             </div>
           </div>
         </div>

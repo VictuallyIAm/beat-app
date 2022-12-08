@@ -44,7 +44,7 @@ const Drumkits = () => {
               <BeatCard
                 songs={kits}
                 song={kit}
-                price={kit.price}
+                price={kit.priceBasic}
                 index={kits.indexOf(kit)}
                 tagOne={kit.tagOne}
                 tagTwo={kit.tagTwo}

@@ -47,7 +47,7 @@ const Samples = () => {
                 <BeatCard
                   songs={samples}
                   song={sample}
-                  price={sample.price}
+                  price={sample.priceBasic}
                   index={samples.indexOf(sample)}
                   tagOne={sample.tagOne}
                   tagTwo={sample.tagTwo}

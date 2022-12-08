@@ -8,7 +8,7 @@ import WaveSurfer from 'wavesurfer.js'
 import styled from 'styled-components'
 import { playPause } from '../../redux/features/playerSlice'
 import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa'
-// import { Visualizer } from '../Visualizer'
+import { ADD_TO_CART } from '../../redux/features/cartSlice'
 
 const SingleEff = ({
   isModalOpen,
@@ -29,6 +29,10 @@ const SingleEff = ({
   const containerRef = useRef()
   const waveSurferRef = useRef(true)
   const [isPlaying, toggleIsPlaying] = useState(false)
+
+  const addToCart = (item, price) => {
+    dispatch(ADD_TO_CART({ item, price }))
+  }
 
   useEffect(() => {
     const waveSurfer = WaveSurfer.create({
@@ -84,7 +88,12 @@ const SingleEff = ({
           </div>
           <div className={styles.lastLine}>
             <div className={styles.buttons}>
-              <button className={styles.btnTwo}>${price}</button>
+              <button
+                className={styles.btnTwo}
+                onClick={() => addToCart(song, price)}
+              >
+                ${price}
+              </button>
               <button className={styles.btnTwo}>Share</button>
             </div>
           </div>

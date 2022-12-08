@@ -3,12 +3,14 @@ import authReducer from './features/authSlice'
 import playerReducer from './features/playerSlice'
 import productReducer from './features/productSlice'
 import filterReducer from './features/filterSlice'
+import cartReducer from './features/cartSlice'
 
 const rootReducer = combineReducers({
   auth: authReducer,
   player: playerReducer,
   product: productReducer,
   filter: filterReducer,
+  cart: cartReducer,
 })
 
 const store = configureStore({

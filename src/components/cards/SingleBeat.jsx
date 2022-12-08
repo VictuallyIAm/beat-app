@@ -12,15 +12,15 @@ import ClickAwayListener from 'react-click-away-listener'
 import { Loader } from '../loader/Loader'
 
 const SingleBeat = ({
-  isModalOpen,
-  audio,
-  beats,
-  beat,
+  setIsModalOneOpen,
+  isModalOneOpen,
+  setIsModalTwoOpen,
   tagOne,
   tagTwo,
   tagThree,
   bpm,
-  price,
+  priceBasic,
+
   title,
   description,
   srcUrl,
@@ -55,7 +55,7 @@ const SingleBeat = ({
     return () => {
       waveSurfer.destroy()
     }
-  }, [srcUrl, isModalOpen, isLoading])
+  }, [srcUrl, isModalOneOpen, isLoading])
 
   return (
     <>
@@ -90,7 +90,15 @@ const SingleBeat = ({
           </div>
           <div className={styles.lastLine}>
             <div className={styles.buttons}>
-              <button className={styles.btnTwo}>Buy</button>
+              <button
+                className={styles.btnTwo}
+                onClick={() => {
+                  setIsModalOneOpen(false)
+                  setIsModalTwoOpen(true)
+                }}
+              >
+                ${priceBasic}
+              </button>
               <button className={styles.btnTwo}>Share</button>
             </div>
             <div className={styles.tags}>

@@ -43,7 +43,7 @@ const Sounds = () => {
               <BeatCard
                 songs={sounds}
                 song={sound}
-                price={sound.price}
+                price={sound.priceBasic}
                 index={sounds.indexOf(sound)}
                 tagOne={sound.tagOne}
                 tagTwo={sound.tagTwo}

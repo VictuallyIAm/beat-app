@@ -16,7 +16,6 @@ import {
   FILTER_BY_SEARCH,
   selectFilteredProducts,
 } from '../redux/features/filterSlice'
-import Modal from '../components/Modal'
 
 const Beats = () => {
   const [beats, setBeats] = useState([])
@@ -129,7 +128,10 @@ const Beats = () => {
               tagTwo={beat.tagTwo}
               tagThree={beat.tagThree}
               bpm={beat.bpm}
-              price={beat.price}
+              priceBasic={beat.priceBasic}
+              priceBasicPro={beat.priceBasicPro}
+              priceUnlimited={beat.priceUnlimited}
+              priceExclusive={beat.priceExclusive}
               index={beats.indexOf(beat)}
               title={beat.title}
               description={beat.description}

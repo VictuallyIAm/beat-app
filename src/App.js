@@ -14,6 +14,7 @@ import Admin from './pages/Admin'
 import AdminOnlyRoute from './components/adminOnlyRoute/AdminOnlyRoute'
 import { useSelector } from 'react-redux'
 import License from './pages/License'
+import Cart from './pages/Cart'
 
 function App() {
   const { activeSong } = useSelector((state) => state.player)
@@ -30,6 +31,7 @@ function App() {
             <Route path="sounds" element={<Sounds />} />
             <Route path="samples" element={<Samples />} />
             <Route path="licensing" element={<License />} />
+            <Route path="cart" element={<Cart />} />
 
             <Route
               path="admin/*"

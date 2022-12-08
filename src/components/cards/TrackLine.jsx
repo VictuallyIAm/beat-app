@@ -16,7 +16,10 @@ export const TrackLine = (props) => {
     index,
     beats,
     bpm,
-    price,
+    priceBasic,
+    priceBasicPro,
+    priceUnlimited,
+    priceExclusive,
     tagOne,
     tagTwo,
     tagThree,
@@ -86,20 +89,26 @@ export const TrackLine = (props) => {
             className={styles.btnTwo}
             onClick={() => setIsModalTwoOpen(true)}
           >
-            $19.95
+            ${priceBasic}
           </button>
         </div>
       </div>
       <Modal isModalOpen={isModalOneOpen} setIsModalOpen={setIsModalOneOpen}>
         <SingleBeat
-          isModalOpen={isModalOneOpen}
+          setIsModalOneOpen={setIsModalOneOpen}
+          isModalOneOpen={isModalOneOpen}
+          isModalTwoOpen={isModalTwoOpen}
+          setIsModalTwoOpen={setIsModalTwoOpen}
           beats={beats}
           beat={beat}
           tagOne={tagOne}
           tagTwo={tagTwo}
           tagThree={tagThree}
           bpm={bpm}
-          price={price}
+          priceBasic={priceBasic}
+          priceBasicPro={priceBasicPro}
+          priceUnlimited={priceUnlimited}
+          priceExclusive={priceExclusive}
           title={title}
           description={description}
           srcUrl={srcUrl}
@@ -108,7 +117,15 @@ export const TrackLine = (props) => {
         />
       </Modal>
       <Modal isModalOpen={isModalTwoOpen} setIsModalOpen={setIsModalTwoOpen}>
-        <ChooseTerm title={title} imageUrl={imageUrl} />
+        <ChooseTerm
+          title={title}
+          imageUrl={imageUrl}
+          beat={beat}
+          priceBasic={priceBasic}
+          priceBasicPro={priceBasicPro}
+          priceUnlimited={priceUnlimited}
+          priceExclusive={priceExclusive}
+        />
       </Modal>
     </>
   )

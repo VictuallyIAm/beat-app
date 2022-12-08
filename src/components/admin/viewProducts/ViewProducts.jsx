@@ -143,7 +143,10 @@ export const ViewProducts = () => {
                   const {
                     id,
                     title,
-                    price,
+                    priceBasic,
+                    priceBasicPro,
+                    priceUnlimited,
+                    priceExclusive,
                     imageUrl,
                     bpm,
                     tagOne,
@@ -165,7 +168,12 @@ export const ViewProducts = () => {
                       <td>{bpm}</td>
                       <td>{tagOne}</td>
                       <td>{tagTwo}</td>
-                      <td>{`$${price}`}</td>
+                      <td>
+                        {`$${priceBasic}`}
+                        {`/$${priceBasicPro}`}
+                        {`/$${priceUnlimited}`}
+                        {`/$${priceExclusive}`}
+                      </td>
                       <td className={styles.actions}>
                         <Link to={`/admin/addproduct/${id}`}>
                           <FaEdit
