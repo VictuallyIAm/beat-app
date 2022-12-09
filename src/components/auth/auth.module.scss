@@ -3,13 +3,13 @@
   position: relative;
   // right: 20px;
   // top: 5px;
-  margin: 10px;
+  // margin: 10px;
 
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 15px;
-  z-index: 999;
+  z-index: 3;
   animation: slide-up 0.5s ease;
 
   .img {
@@ -20,6 +20,7 @@
     padding: 1rem;
 
     h3 {
+      font-size: 20px;
       color: white;
       text-align: center;
     }
@@ -29,11 +30,11 @@
       input[type='password'] {
         display: flex;
         position: relative;
-        font-size: 0.6rem;
+        font-size: 1rem;
         font-weight: 300;
         padding: 0.3rem;
-        margin: 1rem -4px;
-        width: 98%;
+        margin: 1.8rem 0px;
+        width: 100%;
         border: 1.5px solid #777;
         border-radius: 5px;
         justify-content: center;
@@ -44,14 +45,14 @@
       .links {
         display: flex;
         justify-content: center;
-        margin: 5px 0;
-        font-size: 10px;
+        margin: 10px 0;
+        font-size: 14px;
       }
       .linksTwo {
         display: flex;
         justify-content: space-around;
-        margin: 5px 0;
-        font-size: 10px;
+        margin: 10px 0;
+        font-size: 14px;
       }
 
       p {
@@ -67,7 +68,7 @@
       justify-content: center;
       align-items: center;
       margin-top: 1rem;
-      font-size: 10px;
+      font-size: 14px;
       color: white;
     }
   }
@@ -77,10 +78,9 @@
   }
 
   .btn {
-    font-size: 0.6rem;
+    font-size: 1rem;
     font-weight: 400;
     padding: 6px 6px;
-    margin: 0 0px 0 0;
     border: 1px solid transparent;
     border-radius: 3px;
     cursor: pointer;

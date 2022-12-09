@@ -8,7 +8,11 @@ import WaveSurfer from 'wavesurfer.js'
 import styled from 'styled-components'
 import { playPause } from '../../redux/features/playerSlice'
 import { FaPauseCircle, FaPlayCircle } from 'react-icons/fa'
-import { ADD_TO_CART } from '../../redux/features/cartSlice'
+import {
+  ADD_TO_CART,
+  CALCULATE_SUBTOTAL,
+  CALCULATE_TOTAL_QUANTITY,
+} from '../../redux/features/cartSlice'
 
 const SingleEff = ({
   isModalOpen,
@@ -32,6 +36,8 @@ const SingleEff = ({
 
   const addToCart = (item, price) => {
     dispatch(ADD_TO_CART({ item, price }))
+    dispatch(CALCULATE_TOTAL_QUANTITY())
+    dispatch(CALCULATE_SUBTOTAL())
   }
 
   useEffect(() => {

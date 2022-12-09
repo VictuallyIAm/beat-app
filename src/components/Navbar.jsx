@@ -4,28 +4,52 @@ import { ToastContainer, toast } from 'react-toastify'
 import { Link, NavLink } from 'react-router-dom'
 import styles from '../styles/Navbar.module.scss'
 import logo from '../data/images/logo.png'
-import { BiPurchaseTag } from 'react-icons/bi'
+import { FiShoppingCart } from 'react-icons/fi'
 import { Login } from './auth/Login'
 import { Register } from './auth/Register'
 import { Reset } from './auth/Reset'
 import { Dropdown } from './Dropdown'
 import { onAuthStateChanged, signOut } from '@firebase/auth'
 import { auth } from '../firebase/config'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {
   SET_ACTIVE_USER,
   REMOVE_ACTIVE_USER,
 } from '../redux/features/authSlice'
 import ShowOnLogin, { ShowOnLogout } from './hiddenLinks/HiddenLinks'
-import AdminOnlyRoute, { AdminOnlyLink } from './adminOnlyRoute/AdminOnlyRoute'
+import { AdminOnlyLink } from './adminOnlyRoute/AdminOnlyRoute'
 import { UserDrop } from './UserDrop'
+import {
+  CALCULATE_SUBTOTAL,
+  CALCULATE_TOTAL_QUANTITY,
+  selectCartTotalAmount,
+  selectCartTotalQuantity,
+} from '../redux/features/cartSlice'
 
 const Navbar = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false)
   const [isRegisterOpen, setIsRegisterOpen] = useState(false)
   const [isResetOpen, setIsResetOpen] = useState(false)
+  const [scrollPage, setScrollPage] = useState(false)
   const [displayName, setDisplayName] = useState('')
   const dispatch = useDispatch()
+
+  const fixNavbar = () => {
+    if (window.scrollY > 60) {
+      setScrollPage(true)
+    } else {
+      setScrollPage(false)
+    }
+  }
+  window.addEventListener('scroll', fixNavbar)
+
+  const cartTotalQuantity = useSelector(selectCartTotalQuantity)
+  const cartSubtotal = useSelector(selectCartTotalAmount)
+
+  useEffect(() => {
+    dispatch(CALCULATE_TOTAL_QUANTITY())
+    dispatch(CALCULATE_SUBTOTAL())
+  }, [dispatch])
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -58,10 +82,22 @@ const Navbar = () => {
       })
   }
 
+  const cart = (
+    <Link to="/cart">
+      <span className={styles.cart}>
+        <div>${cartSubtotal.toFixed(2)}</div>
+        <div className={styles.a}>
+          <FiShoppingCart size={20} />
+          <div className={styles.p}>{cartTotalQuantity}</div>
+        </div>
+      </span>
+    </Link>
+  )
+
   return (
     <>
       <ToastContainer></ToastContainer>
-      <div className={styles.overtop}>
+      <div className={scrollPage ? `${styles.fixed}` : null}>
         <header
           onClick={(e) => {
             if (isResetOpen) setIsResetOpen(false)
@@ -132,9 +168,13 @@ const Navbar = () => {
               </div>
             </nav>
             <div className={styles.rightNav}>
+              <div>{cart}</div>
               <ShowOnLogout>
-                <p onClick={(e) => setIsLoginOpen(!isLoginOpen)}>
-                  Sign In <BiPurchaseTag />
+                <p
+                  className={styles.sign}
+                  onClick={(e) => setIsLoginOpen(!isLoginOpen)}
+                >
+                  Sign In
                 </p>
               </ShowOnLogout>
 

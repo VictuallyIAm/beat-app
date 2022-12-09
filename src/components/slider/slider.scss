@@ -18,7 +18,7 @@
   height: 100%;
   opacity: 0;
   transform: translateX(-50%);
-  transition: all 0.5s ease;
+  transition: all 0.8s ease;
 }
 
 @media screen and (min-width: 600px) {
@@ -58,8 +58,8 @@
 .content {
   position: absolute;
   text-align: center;
-  margin-top: -19%;
-  top: 20rem;
+  // margin-top: -19%;
+  top: 1rem;
   left: 50%;
   opacity: 0;
   width: 60%;
@@ -70,8 +70,8 @@
   flex-direction: column;
   transform: translateX(-50%);
   background: rgba(0, 0, 0, 0.6);
-  animation: slide-up 1s ease 0.5s;
-  animation-fill-mode: forwards;
+  // animation: slide-up 1s ease 0.5s;
+  // animation-fill-mode: forwards;
   //   visibility: hidden;
   h2 {
     font-size: 3.5rem;

@@ -1,7 +1,11 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { ADD_TO_CART } from '../../redux/features/cartSlice'
+import {
+  ADD_TO_CART,
+  CALCULATE_SUBTOTAL,
+  CALCULATE_TOTAL_QUANTITY,
+} from '../../redux/features/cartSlice'
 import styles from '../../styles/ChooseTerm.module.scss'
 
 const ChooseTerm = ({
@@ -16,6 +20,8 @@ const ChooseTerm = ({
   const dispatch = useDispatch()
   const addToCart = (item, price, license) => {
     dispatch(ADD_TO_CART({ item, price, license }))
+    dispatch(CALCULATE_TOTAL_QUANTITY())
+    dispatch(CALCULATE_SUBTOTAL())
   }
   return (
     <>

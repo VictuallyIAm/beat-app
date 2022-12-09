@@ -4,7 +4,6 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
 } from 'firebase/auth'
-import ClickAwayListener from '@mui/base/ClickAwayListener'
 
 import { ToastContainer, toast } from 'react-toastify'
 import { auth } from '../../firebase/config'

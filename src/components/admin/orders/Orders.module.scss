@@ -1,0 +1,23 @@
+.table {
+  color: white;
+  background-color: rgba($color: #001018, $alpha: 0.8);
+  border: 1px solid gray;
+  border-radius: 15px;
+
+  table {
+    margin: 15px;
+    th {
+      border: 1px solid gray;
+      text-align: center;
+    }
+    tr {
+      border-bottom: 1px solid gray;
+      td {
+        border-bottom: 1px solid gray;
+        text-align: center;
+        font-size: 16px;
+        padding: 3px;
+      }
+    }
+  }
+}
