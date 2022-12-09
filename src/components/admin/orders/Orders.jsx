@@ -87,20 +87,30 @@ export const Orders = () => {
                 <th>Date</th>
                 <th>Title</th>
                 <th>Amount</th>
-                <th>Email</th>
+                <th>EmailPay</th>
+                <th>EmailLog</th>
                 <th>License</th>
                 <th>Actions</th>
               </tr>
             </thead>
             <tbody>
               {orders.map((order) => {
-                const { id, title, email, date, license, price } = order
+                const {
+                  id,
+                  title,
+                  emailPayment,
+                  emailUser,
+                  date,
+                  license,
+                  price,
+                } = order
                 return (
                   <tr key={id}>
                     <td style={{ width: '20%' }}>{date}</td>
                     <td style={{ width: '35%' }}>{title}</td>
                     <td style={{ width: '5%' }}>${price}</td>
-                    <td style={{ width: '20%' }}>{email}</td>
+                    <td style={{ width: '10%' }}>{emailPayment}</td>
+                    <td style={{ width: '10%' }}>{emailUser}</td>
                     <td style={{ width: '15%' }}>{license}</td>
                     <td style={{ width: '5%' }}>
                       <FaTrashAlt

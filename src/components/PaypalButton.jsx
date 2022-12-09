@@ -7,13 +7,16 @@ import emailjs from '@emailjs/browser'
 import { deleteObject, ref } from 'firebase/storage'
 import { useNavigate } from 'react-router'
 import { CLEAR_CART } from '../redux/features/cartSlice'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectEmail, selectIsLoggedIn } from '../redux/features/authSlice'
 
 const PaypalButton = ({ products }) => {
   const [paidFor, setPaidFor] = useState(false)
   const [error, setError] = useState(null)
   const navigate = useNavigate()
   const dispatch = useDispatch()
+  const userEmail = useSelector(selectEmail)
+  const isLoggedIn = useSelector(selectIsLoggedIn)
 
   const templateParams = {
     name: '',
@@ -62,28 +65,57 @@ const PaypalButton = ({ products }) => {
     })
 
     products.forEach((product) => {
-      if (product.item.category === 'Beat') {
-        try {
-          const docRef = addDoc(collection(db, `Orders`), {
-            email: order.payer.email_address,
-            title: product.item.title,
-            price: product.price,
-            license: product.license,
-            date: order.create_time,
-          })
-        } catch (error) {
-          console.log(error.message)
+      if (isLoggedIn) {
+        if (product.item.category === 'Beat') {
+          try {
+            const docRef = addDoc(collection(db, `Orders`), {
+              emailPayment: order.payer.email_address,
+              emailUser: userEmail,
+              title: product.item.title,
+              price: product.price,
+              license: product.license,
+              date: order.create_time,
+            })
+          } catch (error) {
+            console.log(error.message)
+          }
+        } else {
+          try {
+            const docRef = addDoc(collection(db, `Orders`), {
+              emailPayment: order.payer.email_address,
+              emailUser: userEmail,
+              title: product.item.title,
+              price: product.price,
+              date: order.create_time,
+            })
+          } catch (error) {
+            console.log(error.message)
+          }
         }
       } else {
-        try {
-          const docRef = addDoc(collection(db, `Orders`), {
-            email: order.payer.email_address,
-            title: product.item.title,
-            price: product.price,
-            date: order.create_time,
-          })
-        } catch (error) {
-          console.log(error.message)
+        if (product.item.category === 'Beat') {
+          try {
+            const docRef = addDoc(collection(db, `Orders`), {
+              emailPayment: order.payer.email_address,
+              title: product.item.title,
+              price: product.price,
+              license: product.license,
+              date: order.create_time,
+            })
+          } catch (error) {
+            console.log(error.message)
+          }
+        } else {
+          try {
+            const docRef = addDoc(collection(db, `Orders`), {
+              emailPayment: order.payer.email_address,
+              title: product.item.title,
+              price: product.price,
+              date: order.create_time,
+            })
+          } catch (error) {
+            console.log(error.message)
+          }
         }
       }
     })
@@ -92,7 +124,7 @@ const PaypalButton = ({ products }) => {
 
   if (paidFor) {
     toast.success('Payment received succesfully')
-    //redirect to succuss page
+    navigate('/orders')
     dispatch(CLEAR_CART())
     sendEmail()
   }
