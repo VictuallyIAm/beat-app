@@ -106,17 +106,17 @@ const SingleEff = ({
                 ${price}
               </button>
               <button className={styles.btnTwo}>
-                <FacebookShareButton url="/">
+                <FacebookShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsFacebook size={24} />
                 </FacebookShareButton>
               </button>
               <button className={styles.btnTwo}>
-                <TelegramShareButton url="/">
+                <TelegramShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsTelegram size={24} />
                 </TelegramShareButton>
               </button>
               <button className={styles.btnTwo}>
-                <TwitterShareButton url="/">
+                <TwitterShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsTwitter size={24} />
                 </TwitterShareButton>
               </button>

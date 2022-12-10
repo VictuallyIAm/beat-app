@@ -1,3 +1,5 @@
+This is a SPA e-commerce music app for singers, which allows you to listen music, buy a beat or sound pack, see waveform of each sound etc. This is react frontend app, which uses Google Firebase as a backend. If you want to see live working version, you can visit 'htttps://react-beat-app.herokuapp.com', or run this app on your localhost (of course you need to install all dependencies first).
+
 ## Available Scripts
 
 In the project directory, you can run:
