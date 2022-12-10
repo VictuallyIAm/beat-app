@@ -31,10 +31,7 @@ function App() {
           <div className="App">
             <ToastContainer></ToastContainer>
             <Routes>
-              <Route
-                path="htttps://react-beat-app.herokuapp.com"
-                element={<MainLayout />}
-              >
+              <Route path="/" element={<MainLayout />}>
                 <Route path="about" element={<About />} />
                 <Route index element={<Beats />} />
                 <Route path="contacts" element={<Contacts />} />
