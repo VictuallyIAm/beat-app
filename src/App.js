@@ -22,13 +22,12 @@ function App() {
   const { activeSong } = useSelector((state) => state.player)
   return (
     <>
-      <BrowserRouter>
-        <PayPalScriptProvider
-          options={{
-            'client-id':
-              'AWH-8JatYVn7vQO1HRZb2smcdUzq14Q0JcPXhG6X28-1_DJP-YgPxFmVi_e-N_g2lhnXP8-NGCpAo3K2',
-          }}
-        >
+      <PayPalScriptProvider
+        options={{
+          'client-id': process.env.REACT_APP_PAYPAL_CLIENT_ID,
+        }}
+      >
+        <BrowserRouter>
           <div className="App">
             <ToastContainer></ToastContainer>
             <Routes>
@@ -61,8 +60,8 @@ function App() {
               <MusicPlayer />
             </div>
           )}
-        </PayPalScriptProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </PayPalScriptProvider>
     </>
   )
 }

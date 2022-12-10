@@ -1,7 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styles from '../../styles/SingleBeat.module.scss'
-import { PlayPause } from '../PlayPause'
 import { MdDateRange } from 'react-icons/md'
+import {
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+} from 'react-share'
 import { useDispatch } from 'react-redux'
 import PropTypes from 'prop-types'
 import WaveSurfer from 'wavesurfer.js'
@@ -13,6 +17,7 @@ import {
   CALCULATE_SUBTOTAL,
   CALCULATE_TOTAL_QUANTITY,
 } from '../../redux/features/cartSlice'
+import { BsFacebook, BsTelegram, BsTwitter } from 'react-icons/bs'
 
 const SingleEff = ({
   isModalOpen,
@@ -100,7 +105,21 @@ const SingleEff = ({
               >
                 ${price}
               </button>
-              <button className={styles.btnTwo}>Share</button>
+              <button className={styles.btnTwo}>
+                <FacebookShareButton url="/">
+                  <BsFacebook size={24} />
+                </FacebookShareButton>
+              </button>
+              <button className={styles.btnTwo}>
+                <TelegramShareButton url="/">
+                  <BsTelegram size={24} />
+                </TelegramShareButton>
+              </button>
+              <button className={styles.btnTwo}>
+                <TwitterShareButton url="/">
+                  <BsTwitter size={24} />
+                </TwitterShareButton>
+              </button>
             </div>
           </div>
         </div>

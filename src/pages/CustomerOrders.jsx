@@ -20,7 +20,7 @@ const CustomerOrders = () => {
     setIsLoading(true)
     try {
       const ordersRef = collection(db, 'Orders')
-      const q = query(ordersRef, orderBy('date', 'desc'))
+      const q = query(ordersRef, orderBy('createAt', 'desc'))
 
       onSnapshot(q, (snapshot) => {
         const allOrders = snapshot.docs.map((doc) => ({
@@ -47,6 +47,7 @@ const CustomerOrders = () => {
           <table>
             <thead>
               <tr>
+                <th> Order ID</th>
                 <th>Title</th>
                 <th>Amount</th>
                 <th>License</th>
@@ -55,14 +56,26 @@ const CustomerOrders = () => {
             </thead>
             <tbody>
               {ordersFiltered.map((order) => {
-                const { id, title, imageUrl, srcUrl, date, license, price } =
-                  order
+                const { id, title, createAt, license, price } = order
+                const date = new Date(createAt.seconds * 1000)
+                const createDate =
+                  date.getMonth() +
+                  1 +
+                  '.' +
+                  date.getDate() +
+                  '.' +
+                  date.getFullYear() +
+                  '\u00A0' +
+                  date.getHours() +
+                  ':' +
+                  date.getMinutes()
                 return (
                   <tr key={id}>
-                    <td style={{ width: '45%' }}>{title}</td>
+                    <td style={{ width: '20%' }}>{id}</td>
+                    <td style={{ width: '25%' }}>{title}</td>
                     <td style={{ width: '20%' }}>${price}</td>
                     <td style={{ width: '15%' }}>{license}</td>
-                    <td style={{ width: '20%' }}>{date}</td>
+                    <td style={{ width: '20%' }}>{createDate}</td>
                   </tr>
                 )
               })}

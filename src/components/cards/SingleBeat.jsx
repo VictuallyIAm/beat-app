@@ -2,14 +2,18 @@ import React, { useState, useEffect, useRef } from 'react'
 import PropTypes from 'prop-types'
 import WaveSurfer from 'wavesurfer.js'
 import styled from 'styled-components'
+import {
+  FacebookShareButton,
+  TelegramShareButton,
+  TwitterShareButton,
+} from 'react-share'
 import { FaPlayCircle, FaPauseCircle } from 'react-icons/fa'
 import styles from '../../styles/SingleBeat.module.scss'
 import { HiOutlineMusicNote } from 'react-icons/hi'
 import { MdDateRange } from 'react-icons/md'
 import { playPause } from '../../redux/features/playerSlice'
 import { useDispatch } from 'react-redux'
-import ClickAwayListener from 'react-click-away-listener'
-import { Loader } from '../loader/Loader'
+import { BsFacebook, BsTelegram, BsTwitter } from 'react-icons/bs'
 
 const SingleBeat = ({
   setIsModalOneOpen,
@@ -20,7 +24,6 @@ const SingleBeat = ({
   tagThree,
   bpm,
   priceBasic,
-
   title,
   description,
   srcUrl,
@@ -31,6 +34,7 @@ const SingleBeat = ({
   const containerRef = useRef()
   const waveSurferRef = useRef(true)
   const [isPlaying, toggleIsPlaying] = useState(false)
+  // eslint-disable-next-line no-unused-vars
   const [isLoading, setIsLoading] = useState(false)
 
   const date = new Date(createdAt.seconds * 1000)
@@ -99,7 +103,21 @@ const SingleBeat = ({
               >
                 ${priceBasic}
               </button>
-              <button className={styles.btnTwo}>Share</button>
+              <button className={styles.btnFour}>
+                <FacebookShareButton url="/">
+                  <BsFacebook size={24} />
+                </FacebookShareButton>
+              </button>
+              <button className={styles.btnFour}>
+                <TelegramShareButton url="/">
+                  <BsTelegram size={24} />
+                </TelegramShareButton>
+              </button>
+              <button className={styles.btnFour}>
+                <TwitterShareButton url="/">
+                  <BsTwitter size={24} />
+                </TwitterShareButton>
+              </button>
             </div>
             <div className={styles.tags}>
               <div>#{tagOne}</div>

@@ -4,14 +4,9 @@ import { IoLogoSoundcloud } from 'react-icons/io5'
 import {
   AiFillFacebook,
   AiFillYoutube,
-  AiOutlineCopyrightCircle,
   AiFillTwitterCircle,
 } from 'react-icons/ai'
 import styles from '../styles/Footer.module.css'
-import { Link } from 'react-router-dom'
-
-const date = new Date()
-const year = date.getFullYear()
 
 const Footer = () => {
   return (

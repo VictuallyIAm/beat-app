@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import { getStorage, ref, getDownloadURL } from 'firebase/storage'
-import { BsDownload, BsShare } from 'react-icons/bs'
 import styles from '../../styles/TrackLine.module.scss'
 import { PlayPause } from '../PlayPause'
 import Modal from '../Modal'
@@ -79,12 +78,6 @@ export const TrackLine = (props) => {
         </div>
 
         <div className={styles.TrackInfoRight}>
-          <button className={styles.btn}>
-            <BsShare size={25} />
-          </button>
-          {/* <button className={styles.btn} onClick={download}>
-            <BsDownload size={25} />
-          </button> */}
           <button
             className={styles.btnTwo}
             onClick={() => setIsModalTwoOpen(true)}

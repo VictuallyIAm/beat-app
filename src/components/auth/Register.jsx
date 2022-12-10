@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from './auth.module.scss'
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth'
 import { ToastContainer, toast } from 'react-toastify'
@@ -33,6 +33,7 @@ export const Register = ({
     }
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
+        // eslint-disable-next-line no-unused-vars
         const user = userCredential.user
         setIsLoading(false)
         toast.success('Account created')

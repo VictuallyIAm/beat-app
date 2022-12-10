@@ -1,7 +1,13 @@
 import React, { useState } from 'react'
 import { PayPalButtons } from '@paypal/react-paypal-js'
 import { toast } from 'react-toastify'
-import { addDoc, collection, deleteDoc, doc } from 'firebase/firestore'
+import {
+  addDoc,
+  collection,
+  deleteDoc,
+  doc,
+  Timestamp,
+} from 'firebase/firestore'
 import { db, storage } from '../firebase/config'
 import emailjs from '@emailjs/browser'
 import { deleteObject, ref } from 'firebase/storage'
@@ -26,7 +32,7 @@ const PaypalButton = ({ products }) => {
   const sendEmail = () => {
     emailjs
       .send(
-        'service_321usp4',
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
         'template_e1v8fgl',
         templateParams,
         'Qy5EvY0m13ER3oFiB'
@@ -74,7 +80,7 @@ const PaypalButton = ({ products }) => {
               title: product.item.title,
               price: product.price,
               license: product.license,
-              date: order.create_time,
+              createAt: Timestamp.now().toDate(),
             })
           } catch (error) {
             console.log(error.message)

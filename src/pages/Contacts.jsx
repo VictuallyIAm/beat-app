@@ -10,7 +10,7 @@ const Contacts = () => {
 
     emailjs
       .sendForm(
-        'service_321usp4',
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
         'template_n5m22uw',
         form.current,
         'Qy5EvY0m13ER3oFiB'

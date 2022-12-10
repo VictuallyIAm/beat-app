@@ -27,7 +27,7 @@ export const Orders = () => {
     setIsLoading(true)
     try {
       const ordersRef = collection(db, 'Orders')
-      const q = query(ordersRef, orderBy('date', 'desc'))
+      const q = query(ordersRef, orderBy('createAt', 'desc'))
 
       onSnapshot(q, (snapshot) => {
         const allOrders = snapshot.docs.map((doc) => ({
@@ -85,6 +85,7 @@ export const Orders = () => {
             <thead>
               <tr>
                 <th>Date</th>
+                <th>Order ID</th>
                 <th>Title</th>
                 <th>Amount</th>
                 <th>EmailPay</th>
@@ -100,17 +101,31 @@ export const Orders = () => {
                   title,
                   emailPayment,
                   emailUser,
-                  date,
+                  createAt,
                   license,
                   price,
                 } = order
+
+                const date = new Date(createAt.seconds * 1000)
+                const createDate =
+                  date.getMonth() +
+                  1 +
+                  '.' +
+                  date.getDate() +
+                  '.' +
+                  date.getFullYear() +
+                  '\u00A0' +
+                  date.getHours() +
+                  ':' +
+                  date.getMinutes()
                 return (
                   <tr key={id}>
-                    <td style={{ width: '20%' }}>{date}</td>
-                    <td style={{ width: '35%' }}>{title}</td>
+                    <td style={{ width: '10%' }}>{createDate}</td>
+                    <td style={{ width: '10%' }}>{id}</td>
+                    <td style={{ width: '25%' }}>{title}</td>
                     <td style={{ width: '5%' }}>${price}</td>
-                    <td style={{ width: '10%' }}>{emailPayment}</td>
-                    <td style={{ width: '10%' }}>{emailUser}</td>
+                    <td style={{ width: '15%' }}>{emailPayment}</td>
+                    <td style={{ width: '15%' }}>{emailUser}</td>
                     <td style={{ width: '15%' }}>{license}</td>
                     <td style={{ width: '5%' }}>
                       <FaTrashAlt

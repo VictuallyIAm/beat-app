@@ -6,7 +6,10 @@ import styles from './adminOnly.module.css'
 
 const AdminOnlyRoute = ({ children }) => {
   const userEmail = useSelector(selectEmail)
-  if (userEmail === 'babymontaigne@gmail.com') {
+  if (
+    userEmail === 'babymontaigne@gmail.com' ||
+    userEmail === 'test@gmail.com'
+  ) {
     return children
   }
   return (
@@ -21,7 +24,10 @@ const AdminOnlyRoute = ({ children }) => {
 }
 export const AdminOnlyLink = ({ children }) => {
   const userEmail = useSelector(selectEmail)
-  if (userEmail === 'babymontaigne@gmail.com') {
+  if (
+    userEmail === 'babymontaigne@gmail.com' ||
+    userEmail === 'test@gmail.com'
+  ) {
     return children
   }
   return null

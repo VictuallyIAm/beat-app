@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { db, storage } from '../../../firebase/config'
 import {
   deleteObject,
@@ -35,8 +35,6 @@ export const AddProduct = () => {
 
   const products = useSelector(selectProducts)
   const productEdit = products.find((item) => item.id === id)
-
-  const [activeButton, setActiveButton] = useState(false)
 
   const [title, setTitle] = useState(() => {
     if (id === 'ADD') {
@@ -228,6 +226,7 @@ export const AddProduct = () => {
     e.preventDefault()
     setIsLoading(true)
     try {
+      // eslint-disable-next-line no-unused-vars
       const docRef = addDoc(collection(db, `${category}`), {
         title: title,
         imageUrl: imageUrl,
