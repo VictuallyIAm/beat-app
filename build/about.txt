@@ -1,6 +1,0 @@
-This favicon was generated using the following font:
-
-- Font Title: Ole
-- Font Author: Copyright 2008 The Ole Project Authors (https://github.com/googlefonts/ole)
-- Font Source: http://fonts.gstatic.com/s/ole/v3/dFazZf6Z-rd89fw69qJ_ew.ttf
-- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

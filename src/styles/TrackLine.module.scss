@@ -4,7 +4,7 @@
   margin: 10px, 5px;
   height: 60px;
   padding: 20px 20px 20px 20px;
-  background-color: rgba($color: #001018, $alpha: 0.8);
+  background-color: rgba($color: #001018, $alpha: 1);
   box-sizing: border-box;
   // border-radius: 15px;
   color: white;
@@ -12,7 +12,7 @@
 }
 
 .TrackContainer:hover {
-  background-color: rgba($color: #001018, $alpha: 0.9);
+  background-color: rgba($color: #001018, $alpha: 1);
 }
 .costil {
   width: 50%;

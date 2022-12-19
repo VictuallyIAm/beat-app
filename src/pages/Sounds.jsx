@@ -50,7 +50,7 @@ const Sounds = () => {
                 key={sound.id}
                 title={sound.title}
                 description={sound.description}
-                src={sound.srcUrl}
+                srcUrl={sound.srcUrl}
                 imageUrl={sound.imageUrl}
                 createdAt={sound.createdAt}
               />
