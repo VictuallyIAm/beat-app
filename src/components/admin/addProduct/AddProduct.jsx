@@ -194,7 +194,6 @@ export const AddProduct = () => {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           setImageUrl(downloadURL)
-          toast.success('Upload succussfully')
         })
       }
     )
@@ -216,7 +215,6 @@ export const AddProduct = () => {
       () => {
         getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
           setSrcUrl(downloadURL)
-          toast.success('Upload succussfully')
         })
       }
     )
@@ -259,7 +257,7 @@ export const AddProduct = () => {
       setTagThree('')
       setImageUploadProgress(0)
       setSrcUploadProgress(0)
-      toast.success('Uploaded successfully!')
+
       navigate('/admin/viewproducts')
     } catch (error) {
       toast.error(error.message)

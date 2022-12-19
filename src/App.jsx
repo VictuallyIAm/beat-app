@@ -31,7 +31,7 @@ function App() {
           <div className="App">
             <ToastContainer></ToastContainer>
             <Routes>
-              <Route path="/" element={<MainLayout />}>
+              <Route path="/beat-app" element={<MainLayout />}>
                 <Route path="about" element={<About />} />
                 <Route index element={<Beats />} />
                 <Route path="contacts" element={<Contacts />} />
