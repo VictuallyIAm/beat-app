@@ -67,5 +67,3 @@ function App() {
 }
 
 export default App
-
-// rounded-t-3xl

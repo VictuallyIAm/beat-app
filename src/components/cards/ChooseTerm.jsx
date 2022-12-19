@@ -39,7 +39,7 @@ const ChooseTerm = ({
             <div>
               <h2>Basic License</h2>
               <h3>MP3</h3>
-              <Link to="/licensing">Learn more about usage terms</Link>
+              <Link to="licensing">Learn more about usage terms</Link>
             </div>
             <div>
               <button
@@ -54,7 +54,7 @@ const ChooseTerm = ({
             <div>
               <h2>Basic PRO</h2>
               <h3>MP3 and WAV</h3>
-              <Link to="/licensing">Learn more about usage terms</Link>
+              <Link to="licensing">Learn more about usage terms</Link>
             </div>
             <div>
               <button
@@ -69,7 +69,7 @@ const ChooseTerm = ({
             <div>
               <h2>Unlimited</h2>
               <h3>MP3, WAV and TRACK STEMS</h3>
-              <Link to="/licensing">Learn more about usage terms</Link>
+              <Link to="licensing">Learn more about usage terms</Link>
             </div>
             <div>
               <button
@@ -84,7 +84,7 @@ const ChooseTerm = ({
             <div>
               <h2>Exclusive License</h2>
               <h3>MP3, WAV and TRACK STEMS</h3>
-              <Link to="/licensing">Learn more about usage terms</Link>
+              <Link to="licensing">Learn more about usage terms</Link>
             </div>
             <div>
               <button

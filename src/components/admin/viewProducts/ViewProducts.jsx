@@ -175,7 +175,7 @@ export const ViewProducts = () => {
                         {`/$${priceExclusive}`}
                       </td>
                       <td className={styles.actions}>
-                        <Link to={`/admin/addproduct/${id}`}>
+                        <Link to={`/beat-app/admin/addproduct/${id}`}>
                           <FaEdit
                             size={20}
                             color="green"

@@ -8,7 +8,7 @@ const NotFound = () => {
       <p className={styles.p}>Seems like we don't have this page here...</p>
       <br />
       <button className={styles.btnTwo}>
-        <Link to="/">&larr; Continue shopping</Link>
+        <Link to="/beat-app">&larr; Continue shopping</Link>
       </button>
     </div>
   )

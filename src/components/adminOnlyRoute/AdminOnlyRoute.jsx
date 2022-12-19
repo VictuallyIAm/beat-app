@@ -16,7 +16,7 @@ const AdminOnlyRoute = ({ children }) => {
     <section className={styles.container}>
       <h2>This page can only be viewed by admin</h2>
       <br></br>
-      <Link to="/">
+      <Link to="/beat-app">
         <button className={styles.btn}>&larr; Go back</button>
       </Link>
     </section>

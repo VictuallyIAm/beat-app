@@ -41,7 +41,7 @@ const Cart = () => {
             <p className={styles.p}>Your cart is empty</p>
             <br />
             <button className={styles.btnTwo}>
-              <Link to="/">&larr; Continue shopping</Link>
+              <Link to="/beat-app">&larr; Continue shopping</Link>
             </button>
           </div>
         ) : (
@@ -49,7 +49,7 @@ const Cart = () => {
             <div className={styles.head}>
               <h1>Cart review</h1>
               <button className={styles.btnTwo} onClick={clearCart}>
-                Clear cart{' '}
+                Clear cart
               </button>
             </div>
             <div className={styles.section}>
@@ -69,7 +69,7 @@ const Cart = () => {
                       <div className={styles.price}>${price}</div>
                       <div className={styles.license}>
                         {license ? (
-                          <Link to="/licensing">
+                          <Link to="/beat-app/licensing">
                             <button className={styles.licBtn}>
                               {license} license
                             </button>
@@ -99,7 +99,8 @@ const Cart = () => {
                   <div>${cartTotalAmount.toFixed(2)}</div>
                 </div>
                 <div className={styles.forgot}>
-                  Didn't forget something? <Link to="/">Continue shopping</Link>
+                  Didn't forget something?{' '}
+                  <Link to="/beat-app">Continue shopping</Link>
                 </div>
                 <div className={styles.btnOne}>
                   <PaypalButton products={cartItems} />

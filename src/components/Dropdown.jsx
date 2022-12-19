@@ -22,19 +22,19 @@ export const Dropdown = () => {
             className={styles.dropdowmItem}
             onClick={(e) => setIsOpen(false)}
           >
-            <Link to="/samples">Samples</Link>
+            <Link to="samples">Samples</Link>
           </div>
           <div
             className={styles.dropdowmItem}
             onClick={(e) => setIsOpen(false)}
           >
-            <Link to="/drumkits">Kits</Link>
+            <Link to="drumkits">Kits</Link>
           </div>
           <div
             className={styles.dropdowmItem}
             onClick={(e) => setIsOpen(false)}
           >
-            <Link to="/sounds">Sounds</Link>
+            <Link to="sounds">Sounds</Link>
           </div>
         </div>
       )}

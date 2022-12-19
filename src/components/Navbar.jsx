@@ -83,7 +83,7 @@ const Navbar = () => {
   }
 
   const cart = (
-    <Link to="/cart">
+    <Link to="cart">
       <span className={styles.cart}>
         <div>${cartSubtotal.toFixed(2)}</div>
         <div className={styles.a}>
@@ -107,7 +107,7 @@ const Navbar = () => {
         >
           <div className={styles.header}>
             <div className={styles.logo}>
-              <Link to="/">
+              <Link to="/beat-app">
                 <img src={logo} alt="logo" />
               </Link>
             </div>
@@ -115,21 +115,14 @@ const Navbar = () => {
               <div>
                 <ul>
                   <li>
-                    <NavLink
-                      to="/"
-                      className={({ isActive }) =>
-                        isActive ? `${styles.activeLink}` : ''
-                      }
-                    >
-                      Beats
-                    </NavLink>
+                    <NavLink to="/beat-app">Beats</NavLink>
                   </li>
                   <li>
                     <Dropdown />
                   </li>
                   <li>
                     <NavLink
-                      to="/about"
+                      to="about"
                       className={({ isActive }) =>
                         isActive ? `${styles.activeLink}` : ''
                       }
@@ -139,7 +132,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/contacts"
+                      to="contacts"
                       className={({ isActive }) =>
                         isActive ? `${styles.activeLink}` : ''
                       }
@@ -149,7 +142,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <NavLink
-                      to="/licensing"
+                      to="licensing"
                       className={({ isActive }) =>
                         isActive ? `${styles.activeLink}` : ''
                       }
@@ -159,7 +152,7 @@ const Navbar = () => {
                   </li>
                   <li>
                     <AdminOnlyLink>
-                      <Link to="/admin/home">
+                      <Link to="admin/home">
                         <button className={styles.btn}>Administrate</button>
                       </Link>
                     </AdminOnlyLink>
