@@ -143,15 +143,15 @@ const License = () => {
           -0500 (the “Effective Date”) by and between Producer Name p/k/a
           Montaigne Beats (the “Producer” or “Licensor”); and Licensee residing
           at [N/A] (“You” or “Licensee”), sets forth the terms and conditions of
-          the Licensee’s use, and the rights granted in, the Producer’s
+          the Licensee`s use, and the rights granted in, the Producer`s
           instrumental music file entitled The Beat Title (Contract Preview
-          Only) (the “Beat”) in consideration for Licensee’s payment of $19.95
+          Only) (the “Beat”) in consideration for Licensee`s payment of $19.95
           (the “License Fee”), on a so-called “Basic License” basis. This
           Agreement is issued solely in connection with and for Licensee's use
           of the Beat pursuant and subject to all terms and conditions set forth
           herein. License Fee: The Licensee to shall make payment of the License
           Fee to Licensor on the date of this Agreement. All rights granted to
-          Licensee by Producer in the Beat are conditional upon Licensee’s
+          Licensee by Producer in the Beat are conditional upon Licensee`s
           timely payment of the License Fee. The License Fee is a one-time
           payment for the rights granted to Licensee and this Agreement is not
           valid until the License Fee has been paid. Delivery of the Beat:
@@ -162,7 +162,7 @@ const License = () => {
           receive the Beat via email, to the email address Licensee provided to
           Licensor. Term: The Term of this Agreement shall be ten (10) years and
           this license shall expire on the ten (10) year anniversary of the
-          Effective Date. Use of the Beat: In consideration for Licensee’s
+          Effective Date. Use of the Beat: In consideration for Licensee`s
           payment of the License Fee, the Producer hereby grants Licensee a
           limited non-exclusive, nontransferable license and the right to
           incorporate, include and/or use the Beat in the preparation of one (1)
@@ -217,7 +217,7 @@ const License = () => {
           a vest. Any sale of the Beat in its original form by Licensee shall be
           a material breach of this Agreement and the Licensee shall be liable
           to the Licensor for damages as provided hereunder. Subject to the
-          Licensee’s compliance with the terms and conditions of this Agreement,
+          Licensee`s compliance with the terms and conditions of this Agreement,
           Licensee shall not be required to account or pay to Producer any
           royalties, fees, or monies paid to or collected by the Licensee
           (expressly excluding mechanical royalties), or which would otherwise
@@ -276,7 +276,7 @@ const License = () => {
           aforementioned right to register the New Song and/or the Beat shall be
           strictly limited to Producer. Licensee will, upon request, execute,
           acknowledge and deliver to Producer such additional documents as
-          Producer may deem necessary to evidence and effectuate Producer’s
+          Producer may deem necessary to evidence and effectuate Producer`s
           rights hereunder, and Licensee hereby grants to Producer the right as
           attorney-in-fact to execute, acknowledge, deliver and record in the
           U.S. Copyright Office or elsewhere any and all such documents if
@@ -293,14 +293,14 @@ const License = () => {
           underlying composition shall be owned/split between them as follows: -
           Licensee, owns 50% of the writers share. - Producer Name, owns 50% of
           the writers share. Producer shall own, control, and administer Fifty
-          Percent (50%) of the so-called “Publisher’s Share” of the underlying
+          Percent (50%) of the so-called “Publisher`s Share” of the underlying
           composition. In the event that Licensee wishes to register his/her
           interests and rights to the underlying composition of the New Song
           with their Performing Rights Organization (“PRO”), Licensee must
-          simultaneously identify and register the Producer’s share and
+          simultaneously identify and register the Producer`s share and
           ownership interest in the composition to indicate that Producer wrote
           and owns 50% of the composition in the New Song and as the owner of
-          50% of the Publisher’s share of the New Song. The licensee shall be
+          50% of the Publisher`s share of the New Song. The licensee shall be
           deemed to have signed, affirmed and ratified its acceptance of the
           terms of this Agreement by virtue of its payment of the License Fee to
           Licensor and its electronic acceptance of its terms and conditions at
@@ -322,7 +322,7 @@ const License = () => {
           royalty rate will be the rate prevailing on an industry-wide basis in
           the country concerned on the date that this agreement has been entered
           into. Credit: Licensee shall have the right to use and permit others
-          to use Producer’s approved name, approved likeness, and other approved
+          to use Producer`s approved name, approved likeness, and other approved
           identification and approved biographical material concerning the
           Producer solely for purposes of trade and otherwise without
           restriction solely in connection with the New Song recorded hereunder.
@@ -340,23 +340,23 @@ const License = () => {
           event of any failure by Licensee to issue the credit to Producer,
           Licensee must use reasonable efforts to correct any such failure
           immediately and on a prospective basis. Such credit shall be in the
-          substantial form: “Produced by Montaigne Beats”. Licensor’s Option:
-          Licensor shall have the option, at Licensor’s sole discretion, to
+          substantial form: “Produced by Montaigne Beats”. Licensor`s Option:
+          Licensor shall have the option, at Licensor`s sole discretion, to
           terminate this License at any time within three (3) years of the date
           of this Agreement upon written notice to Licensee. In the event that
           Licensor exercises this option, Licensor shall pay to Licensee a sum
           equal to Two Hundred Percent (200%) of the License Fee paid by
-          Licensee. Upon Licensor’s exercise of the option, Licensee must
+          Licensee. Upon Licensor`s exercise of the option, Licensee must
           immediately remove the New Song from any and all digital and physical
           distribution channels and must immediately cease access to any streams
           and/or downloads of the New Song by the general public. Breach by
           Licensee: The licensee shall have five (5) business days from its
-          receipt of written notice by Producer and/or Producer’s authorized
+          receipt of written notice by Producer and/or Producer`s authorized
           representative to cure any alleged breach of this Agreement by
-          Licensee. Licensee’s failure to cure the alleged breach within five
-          (5) business days shall result in Licensee’s default of its
+          Licensee. Licensee`s failure to cure the alleged breach within five
+          (5) business days shall result in Licensee`s default of its
           obligations, its breach of this Agreement, and at Producer's sole
-          discretion, the termination of Licensee’s rights hereunder. If
+          discretion, the termination of Licensee`s rights hereunder. If
           Licensee engages in the commercial exploitation and/or sale of the
           Beat or New Song outside of the manner and amount expressly provided
           for in this Agreement, Licensee shall be liable to Producer for
@@ -376,7 +376,7 @@ const License = () => {
           limited to the recovery of damages from the Licensee. The Licensee
           shall be responsible for all costs, expenses or damages that Producer
           incurs as a result of any violation by the Licensee of any provision
-          of this Agreement. Licensee’ obligation shall include court costs,
+          of this Agreement. Licensee` obligation shall include court costs,
           litigation expenses, and reasonable attorneys' fees. Warranties,
           Representations, and Indemnification: Licensee hereby agrees that
           Licensor has not made any guarantees or promises that the Beat fits
@@ -500,15 +500,15 @@ const License = () => {
           -0500 (the “Effective Date”) by and between Producer Name p/k/a
           Montaigne Beats (the “Producer” or “Licensor”); and Licensee residing
           at [N/A] (“You” or “Licensee”), sets forth the terms and conditions of
-          the Licensee’s use, and the rights granted in, the Producer’s
+          the Licensee`s use, and the rights granted in, the Producer`s
           instrumental music file entitled The Beat Title (Contract Preview
-          Only) (the “Beat”) in consideration for Licensee’s payment of $29.99
+          Only) (the “Beat”) in consideration for Licensee`s payment of $29.99
           (the “License Fee”), on a so-called “Basic PRO” basis. This Agreement
           is issued solely in connection with and for Licensee's use of the Beat
           pursuant and subject to all terms and conditions set forth herein.
           License Fee: The Licensee to shall make payment of the License Fee to
           Licensor on the date of this Agreement. All rights granted to Licensee
-          by Producer in the Beat are conditional upon Licensee’s timely payment
+          by Producer in the Beat are conditional upon Licensee`s timely payment
           of the License Fee. The License Fee is a one-time payment for the
           rights granted to Licensee and this Agreement is not valid until the
           License Fee has been paid. Delivery of the Beat: Licensor agrees to
@@ -519,7 +519,7 @@ const License = () => {
           email, to the email address Licensee provided to Licensor. Term: The
           Term of this Agreement shall be ten (10) years and this license shall
           expire on the ten (10) year anniversary of the Effective Date. Use of
-          the Beat: In consideration for Licensee’s payment of the License Fee,
+          the Beat: In consideration for Licensee`s payment of the License Fee,
           the Producer hereby grants Licensee a limited non-exclusive,
           nontransferable license and the right to incorporate, include and/or
           use the Beat in the preparation of one (1) new song or to incorporate
@@ -574,7 +574,7 @@ const License = () => {
           a vest. Any sale of the Beat in its original form by Licensee shall be
           a material breach of this Agreement and the Licensee shall be liable
           to the Licensor for damages as provided hereunder. Subject to the
-          Licensee’s compliance with the terms and conditions of this Agreement,
+          Licensee`s compliance with the terms and conditions of this Agreement,
           Licensee shall not be required to account or pay to Producer any
           royalties, fees, or monies paid to or collected by the Licensee
           (expressly excluding mechanical royalties), or which would otherwise
@@ -633,7 +633,7 @@ const License = () => {
           aforementioned right to register the New Song and/or the Beat shall be
           strictly limited to Producer. Licensee will, upon request, execute,
           acknowledge and deliver to Producer such additional documents as
-          Producer may deem necessary to evidence and effectuate Producer’s
+          Producer may deem necessary to evidence and effectuate Producer`s
           rights hereunder, and Licensee hereby grants to Producer the right as
           attorney-in-fact to execute, acknowledge, deliver and record in the
           U.S. Copyright Office or elsewhere any and all such documents if
@@ -650,14 +650,14 @@ const License = () => {
           underlying composition shall be owned/split between them as follows: -
           Licensee, owns 50% of the writers share. - Producer Name, owns 50% of
           the writers share. Producer shall own, control, and administer Fifty
-          Percent (50%) of the so-called “Publisher’s Share” of the underlying
+          Percent (50%) of the so-called “Publisher`s Share” of the underlying
           composition. In the event that Licensee wishes to register his/her
           interests and rights to the underlying composition of the New Song
           with their Performing Rights Organization (“PRO”), Licensee must
-          simultaneously identify and register the Producer’s share and
+          simultaneously identify and register the Producer`s share and
           ownership interest in the composition to indicate that Producer wrote
           and owns 50% of the composition in the New Song and as the owner of
-          50% of the Publisher’s share of the New Song. The licensee shall be
+          50% of the Publisher`s share of the New Song. The licensee shall be
           deemed to have signed, affirmed and ratified its acceptance of the
           terms of this Agreement by virtue of its payment of the License Fee to
           Licensor and its electronic acceptance of its terms and conditions at
@@ -679,7 +679,7 @@ const License = () => {
           royalty rate will be the rate prevailing on an industry-wide basis in
           the country concerned on the date that this agreement has been entered
           into. Credit: Licensee shall have the right to use and permit others
-          to use Producer’s approved name, approved likeness, and other approved
+          to use Producer`s approved name, approved likeness, and other approved
           identification and approved biographical material concerning the
           Producer solely for purposes of trade and otherwise without
           restriction solely in connection with the New Song recorded hereunder.
@@ -697,23 +697,23 @@ const License = () => {
           event of any failure by Licensee to issue the credit to Producer,
           Licensee must use reasonable efforts to correct any such failure
           immediately and on a prospective basis. Such credit shall be in the
-          substantial form: “Produced by Montaigne Beats”. Licensor’s Option:
-          Licensor shall have the option, at Licensor’s sole discretion, to
+          substantial form: “Produced by Montaigne Beats”. Licensor`s Option:
+          Licensor shall have the option, at Licensor`s sole discretion, to
           terminate this License at any time within three (3) years of the date
           of this Agreement upon written notice to Licensee. In the event that
           Licensor exercises this option, Licensor shall pay to Licensee a sum
           equal to Two Hundred Percent (200%) of the License Fee paid by
-          Licensee. Upon Licensor’s exercise of the option, Licensee must
+          Licensee. Upon Licensor`s exercise of the option, Licensee must
           immediately remove the New Song from any and all digital and physical
           distribution channels and must immediately cease access to any streams
           and/or downloads of the New Song by the general public. Breach by
           Licensee: The licensee shall have five (5) business days from its
-          receipt of written notice by Producer and/or Producer’s authorized
+          receipt of written notice by Producer and/or Producer`s authorized
           representative to cure any alleged breach of this Agreement by
-          Licensee. Licensee’s failure to cure the alleged breach within five
-          (5) business days shall result in Licensee’s default of its
+          Licensee. Licensee`s failure to cure the alleged breach within five
+          (5) business days shall result in Licensee`s default of its
           obligations, its breach of this Agreement, and at Producer's sole
-          discretion, the termination of Licensee’s rights hereunder. If
+          discretion, the termination of Licensee`s rights hereunder. If
           Licensee engages in the commercial exploitation and/or sale of the
           Beat or New Song outside of the manner and amount expressly provided
           for in this Agreement, Licensee shall be liable to Producer for
@@ -733,7 +733,7 @@ const License = () => {
           limited to the recovery of damages from the Licensee. The Licensee
           shall be responsible for all costs, expenses or damages that Producer
           incurs as a result of any violation by the Licensee of any provision
-          of this Agreement. Licensee’ obligation shall include court costs,
+          of this Agreement. Licensee` obligation shall include court costs,
           litigation expenses, and reasonable attorneys' fees. Warranties,
           Representations, and Indemnification: Licensee hereby agrees that
           Licensor has not made any guarantees or promises that the Beat fits
@@ -857,15 +857,15 @@ const License = () => {
           -0500 (the “Effective Date”) by and between Producer Name p/k/a
           Montaigne Beats (the “Producer” or “Licensor”); and Licensee residing
           at [N/A] (“You” or “Licensee”), sets forth the terms and conditions of
-          the Licensee’s use, and the rights granted in, the Producer’s
+          the Licensee`s use, and the rights granted in, the Producer`s
           instrumental music file entitled The Beat Title (Contract Preview
-          Only) (the “Beat”) in consideration for Licensee’s payment of $74.99
+          Only) (the “Beat”) in consideration for Licensee`s payment of $74.99
           (the “License Fee”), on a so-called “Unlimited” basis. This Agreement
           is issued solely in connection with and for Licensee's use of the Beat
           pursuant and subject to all terms and conditions set forth herein.
           License Fee: The Licensee to shall make payment of the License Fee to
           Licensor on the date of this Agreement. All rights granted to Licensee
-          by Producer in the Beat are conditional upon Licensee’s timely payment
+          by Producer in the Beat are conditional upon Licensee`s timely payment
           of the License Fee. The License Fee is a one-time payment for the
           rights granted to Licensee and this Agreement is not valid until the
           License Fee has been paid. Delivery of the Beat: Licensor agrees to
@@ -876,7 +876,7 @@ const License = () => {
           receive the Beat via email, to the email address Licensee provided to
           Licensor. Term: The Term of this Agreement shall be ten (10) years and
           this license shall expire on the ten (10) year anniversary of the
-          Effective Date. Use of the Beat: In consideration for Licensee’s
+          Effective Date. Use of the Beat: In consideration for Licensee`s
           payment of the License Fee, the Producer hereby grants Licensee a
           limited non-exclusive, nontransferable license and the right to
           incorporate, include and/or use the Beat in the preparation of one (1)
@@ -931,7 +931,7 @@ const License = () => {
           a vest. Any sale of the Beat in its original form by Licensee shall be
           a material breach of this Agreement and the Licensee shall be liable
           to the Licensor for damages as provided hereunder. Subject to the
-          Licensee’s compliance with the terms and conditions of this Agreement,
+          Licensee`s compliance with the terms and conditions of this Agreement,
           Licensee shall not be required to account or pay to Producer any
           royalties, fees, or monies paid to or collected by the Licensee
           (expressly excluding mechanical royalties), or which would otherwise
@@ -990,7 +990,7 @@ const License = () => {
           aforementioned right to register the New Song and/or the Beat shall be
           strictly limited to Producer. Licensee will, upon request, execute,
           acknowledge and deliver to Producer such additional documents as
-          Producer may deem necessary to evidence and effectuate Producer’s
+          Producer may deem necessary to evidence and effectuate Producer`s
           rights hereunder, and Licensee hereby grants to Producer the right as
           attorney-in-fact to execute, acknowledge, deliver and record in the
           U.S. Copyright Office or elsewhere any and all such documents if
@@ -1007,14 +1007,14 @@ const License = () => {
           underlying composition shall be owned/split between them as follows: -
           Licensee, owns 50% of the writers share. - Producer Name, owns 50% of
           the writers share. Producer shall own, control, and administer Fifty
-          Percent (50%) of the so-called “Publisher’s Share” of the underlying
+          Percent (50%) of the so-called “Publisher`s Share” of the underlying
           composition. In the event that Licensee wishes to register his/her
           interests and rights to the underlying composition of the New Song
           with their Performing Rights Organization (“PRO”), Licensee must
-          simultaneously identify and register the Producer’s share and
+          simultaneously identify and register the Producer`s share and
           ownership interest in the composition to indicate that Producer wrote
           and owns 50% of the composition in the New Song and as the owner of
-          50% of the Publisher’s share of the New Song. The licensee shall be
+          50% of the Publisher`s share of the New Song. The licensee shall be
           deemed to have signed, affirmed and ratified its acceptance of the
           terms of this Agreement by virtue of its payment of the License Fee to
           Licensor and its electronic acceptance of its terms and conditions at
@@ -1036,7 +1036,7 @@ const License = () => {
           royalty rate will be the rate prevailing on an industry-wide basis in
           the country concerned on the date that this agreement has been entered
           into. Credit: Licensee shall have the right to use and permit others
-          to use Producer’s approved name, approved likeness, and other approved
+          to use Producer`s approved name, approved likeness, and other approved
           identification and approved biographical material concerning the
           Producer solely for purposes of trade and otherwise without
           restriction solely in connection with the New Song recorded hereunder.
@@ -1054,23 +1054,23 @@ const License = () => {
           event of any failure by Licensee to issue the credit to Producer,
           Licensee must use reasonable efforts to correct any such failure
           immediately and on a prospective basis. Such credit shall be in the
-          substantial form: “Produced by Montaigne Beats”. Licensor’s Option:
-          Licensor shall have the option, at Licensor’s sole discretion, to
+          substantial form: “Produced by Montaigne Beats”. Licensor`s Option:
+          Licensor shall have the option, at Licensor`s sole discretion, to
           terminate this License at any time within three (3) years of the date
           of this Agreement upon written notice to Licensee. In the event that
           Licensor exercises this option, Licensor shall pay to Licensee a sum
           equal to Two Hundred Percent (200%) of the License Fee paid by
-          Licensee. Upon Licensor’s exercise of the option, Licensee must
+          Licensee. Upon Licensor`s exercise of the option, Licensee must
           immediately remove the New Song from any and all digital and physical
           distribution channels and must immediately cease access to any streams
           and/or downloads of the New Song by the general public. Breach by
           Licensee: The licensee shall have five (5) business days from its
-          receipt of written notice by Producer and/or Producer’s authorized
+          receipt of written notice by Producer and/or Producer`s authorized
           representative to cure any alleged breach of this Agreement by
-          Licensee. Licensee’s failure to cure the alleged breach within five
-          (5) business days shall result in Licensee’s default of its
+          Licensee. Licensee`s failure to cure the alleged breach within five
+          (5) business days shall result in Licensee`s default of its
           obligations, its breach of this Agreement, and at Producer's sole
-          discretion, the termination of Licensee’s rights hereunder. If
+          discretion, the termination of Licensee`s rights hereunder. If
           Licensee engages in the commercial exploitation and/or sale of the
           Beat or New Song outside of the manner and amount expressly provided
           for in this Agreement, Licensee shall be liable to Producer for
@@ -1090,7 +1090,7 @@ const License = () => {
           limited to the recovery of damages from the Licensee. The Licensee
           shall be responsible for all costs, expenses or damages that Producer
           incurs as a result of any violation by the Licensee of any provision
-          of this Agreement. Licensee’ obligation shall include court costs,
+          of this Agreement. Licensee` obligation shall include court costs,
           litigation expenses, and reasonable attorneys' fees. Warranties,
           Representations, and Indemnification: Licensee hereby agrees that
           Licensor has not made any guarantees or promises that the Beat fits
