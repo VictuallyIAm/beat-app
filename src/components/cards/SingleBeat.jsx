@@ -103,21 +103,21 @@ const SingleBeat = ({
               >
                 ${priceBasic}
               </button>
-              <button className={styles.btnFour}>
+              <div className={styles.btnFour}>
                 <FacebookShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsFacebook size={24} />
                 </FacebookShareButton>
-              </button>
-              <button className={styles.btnFour}>
+              </div>
+              <div className={styles.btnFour}>
                 <TelegramShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsTelegram size={24} />
                 </TelegramShareButton>
-              </button>
-              <button className={styles.btnFour}>
+              </div>
+              <div className={styles.btnFour}>
                 <TwitterShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsTwitter size={24} />
                 </TwitterShareButton>
-              </button>
+              </div>
             </div>
             <div className={styles.tags}>
               <div>#{tagOne}</div>

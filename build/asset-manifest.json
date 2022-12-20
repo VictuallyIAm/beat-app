@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/beat-app/static/css/main.6f0b9b9c.css",
+    "main.js": "/beat-app/static/js/main.7510a713.js",
+    "static/media/background.jpg": "/beat-app/static/media/background.5605d163878882316fcd.jpg",
+    "static/media/loaderMuch.gif": "/beat-app/static/media/loaderMuch.1eac07c042a6fa47bfb5.gif",
+    "index.html": "/beat-app/index.html",
+    "main.6f0b9b9c.css.map": "/beat-app/static/css/main.6f0b9b9c.css.map",
+    "main.7510a713.js.map": "/beat-app/static/js/main.7510a713.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6f0b9b9c.css",
+    "static/js/main.7510a713.js"
+  ]
+}

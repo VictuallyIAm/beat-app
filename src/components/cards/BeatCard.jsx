@@ -12,7 +12,6 @@ export const BeatCard = ({
   tagOne,
   tagTwo,
   tagThree,
-  key,
   title,
   description,
   srcUrl,
@@ -41,11 +40,16 @@ export const BeatCard = ({
       </Modal>
       <div className={styles.cardBody}>
         <div className={styles.card}>
-          <img src={imageUrl} alt="" onClick={() => setIsModalOpen(true)} />
+          <img src={imageUrl} alt="logo" onClick={() => setIsModalOpen(true)} />
           <div className={styles.trackDescription}>
             <div className={styles.title}>
               <PlayPause song={song} songs={songs} index={index} />
-              <p onClick={() => setIsModalOpen(true)}>{`${title}`}</p>
+              <div>
+                <p onClick={() => setIsModalOpen(true)}>{`${title}`}</p>
+                <span onClick={() => setIsModalOpen(true)}>
+                  Montaigne Beats
+                </span>
+              </div>
             </div>
             <div className={styles.title}>
               <button

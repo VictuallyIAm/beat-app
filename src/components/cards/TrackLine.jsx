@@ -61,7 +61,10 @@ export const TrackLine = (props) => {
             className={styles.titleContainer}
             onClick={() => setIsModalOneOpen(true)}
           >
-            <p>{title}</p>
+            <div className={styles.titles}>
+              <p>{title}</p>
+              <span>Montaigne Beats</span>
+            </div>
           </div>
         </div>
         <div className={styles.bpm}>{bpm}&nbsp; BPM</div>

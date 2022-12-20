@@ -137,7 +137,7 @@ const License = () => {
       </div>
       <Modal isModalOpen={modalOne} setIsModalOpen={setModalOne}>
         <h1> License preview</h1>
-        <p>
+        <p className={styles.p}>
           This Non-Exclusive Basic License License Agreement (the “Agreement”),
           having been made on and effective as of Wed, 07 Dec 2022 02:21:09
           -0500 (the “Effective Date”) by and between Producer Name p/k/a
@@ -494,7 +494,7 @@ const License = () => {
       </Modal>
       <Modal isModalOpen={modalTwo} setIsModalOpen={setModalTwo}>
         <h1> License preview</h1>
-        <p>
+        <p className={styles.p}>
           This Non-Exclusive Basic PRO License Agreement (the “Agreement”),
           having been made on and effective as of Wed, 07 Dec 2022 02:22:37
           -0500 (the “Effective Date”) by and between Producer Name p/k/a
@@ -851,7 +851,7 @@ const License = () => {
       </Modal>
       <Modal isModalOpen={modalThree} setIsModalOpen={setModalThree}>
         <h1> License preview</h1>
-        <p>
+        <p className={styles.p}>
           This Non-Exclusive Unlimited License Agreement (the “Agreement”),
           having been made on and effective as of Wed, 07 Dec 2022 02:23:11
           -0500 (the “Effective Date”) by and between Producer Name p/k/a
@@ -1208,7 +1208,7 @@ const License = () => {
       </Modal>
       <Modal isModalOpen={modalFour} setIsModalOpen={setModalFour}>
         <h1> License preview</h1>
-        <p>
+        <p className={styles.p}>
           Wed, 07 Dec 2022 02:23:26 -0500 Montaigne Beats -w- Licensee /
           Producer Agreement / "The Beat Title (Contract Preview Only)" The
           following sets forth the material terms and conditions with respect to

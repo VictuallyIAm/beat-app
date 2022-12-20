@@ -101,21 +101,21 @@ const SingleEff = ({
               >
                 ${price}
               </button>
-              <button className={styles.btnTwo}>
+              <div className={styles.btnTwo}>
                 <FacebookShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsFacebook size={24} />
                 </FacebookShareButton>
-              </button>
-              <button className={styles.btnTwo}>
+              </div>
+              <div className={styles.btnTwo}>
                 <TelegramShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsTelegram size={24} />
                 </TelegramShareButton>
-              </button>
-              <button className={styles.btnTwo}>
+              </div>
+              <div className={styles.btnTwo}>
                 <TwitterShareButton url="htttps://react-beat-app.herokuapp.com">
                   <BsTwitter size={24} />
                 </TwitterShareButton>
-              </button>
+              </div>
             </div>
           </div>
         </div>

@@ -38,7 +38,6 @@
   justify-self: center;
   border: 1px solid #85858554;
   border-radius: 4px;
-  // cursor: pointer;
   overflow: hidden;
   transition: border 0.2s ease;
   margin-bottom: 10px;
@@ -46,7 +45,7 @@
 }
 .card img {
   cursor: pointer;
-  max-height: 70%;
+  height: 70%;
   min-width: 90%;
   padding: 10px;
   object-fit: cover;
@@ -65,7 +64,6 @@
 }
 .trackDescription {
   color: white;
-  margin-top: 5px;
   padding-left: 15px;
 }
 .title {
@@ -75,9 +73,18 @@
 
   p {
     margin-left: 20px;
-    cursor: pointer;
     &:hover {
-      color: gray;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+  span {
+    margin-left: 20px;
+    font-size: small;
+    color: rgb(172, 171, 171);
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
     }
   }
   button {
@@ -97,6 +104,9 @@
   transform: scale(0);
   transition: all 0.4s ease 0.15s;
 }
+.imgCont {
+  width: 100%;
+}
 .play i {
   font-size: 14px;
 }
@@ -110,7 +120,7 @@
   padding: 6px 6px;
   width: 83%;
   height: 30px;
-  margin: 0px 0px;
+  margin: 5px 0px;
   border: 1px solid transparent;
   border-radius: 3px;
   cursor: pointer;

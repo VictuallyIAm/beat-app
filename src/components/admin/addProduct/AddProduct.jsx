@@ -258,7 +258,7 @@ export const AddProduct = () => {
       setImageUploadProgress(0)
       setSrcUploadProgress(0)
 
-      navigate('/admin/viewproducts')
+      navigate('/beat-app/admin/viewproducts')
     } catch (error) {
       toast.error(error.message)
       setIsLoading(false)
@@ -298,7 +298,7 @@ export const AddProduct = () => {
       })
       setIsLoading(false)
       toast.success('Edited successfully')
-      navigate('/admin/viewproducts')
+      navigate('/beat-app/admin/viewproducts')
     } catch (error) {
       toast.error(error.message)
       setIsLoading(false)

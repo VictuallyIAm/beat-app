@@ -102,16 +102,13 @@ const Beats = () => {
       <div className={styles.tags}>
         {uniqueTags.map((tag) => {
           return (
-            <>
-              {' '}
-              <div
-                className={styles.tag}
-                key={uniqueTags.indexOf(tag)}
-                onClick={() => setSearch(tag)}
-              >
-                #{tag}{' '}
-              </div>
-            </>
+            <div
+              className={styles.tag}
+              key={uniqueTags.indexOf(tag)}
+              onClick={() => setSearch(tag)}
+            >
+              #{tag}
+            </div>
           )
         })}
       </div>

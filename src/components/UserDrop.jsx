@@ -9,8 +9,8 @@ export const UserDrop = ({ displayName, userLogout }) => {
   return (
     <div
       className={styles.dropdown}
-      onMouseEnter={(e) => setIsOpen(true)}
-      onMouseLeave={(e) => setIsOpen(!isOpen)}
+      onMouseEnter={() => setIsOpen(true)}
+      onMouseLeave={() => setIsOpen(!isOpen)}
     >
       <div className={styles.dropdownIconContainer}>
         <div className={styles.dropdownBtn}>Hi, {displayName}</div>
@@ -18,16 +18,10 @@ export const UserDrop = ({ displayName, userLogout }) => {
       </div>
       {isOpen && (
         <div className={styles.dropdownContent}>
-          <div
-            className={styles.dropdowmItem}
-            onClick={(e) => setIsOpen(false)}
-          >
+          <div className={styles.dropdowmItem} onClick={() => setIsOpen(false)}>
             <Link to="orders">My orders</Link>
           </div>
-          <div
-            className={styles.dropdowmItem}
-            onClick={(e) => setIsOpen(false)}
-          >
+          <div className={styles.dropdowmItem} onClick={() => setIsOpen(false)}>
             <Link onClick={userLogout}>Log Out</Link>
           </div>
         </div>

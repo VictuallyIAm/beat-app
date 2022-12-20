@@ -14,11 +14,10 @@ h1 {
 
 .table {
   color: white;
-  margin: 20px 90px 20px 90px;
+  margin: 1rem 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000000;
 
   span {
     text-align: center;
@@ -35,9 +34,11 @@ h1 {
 }
 .item {
   padding: 5px;
+  margin: 0 0.5rem;
   border: 1px solid gray;
   border-radius: 15px;
   height: 600px;
+  background-color: #000000;
 }
 
 .cost {
@@ -71,7 +72,7 @@ h1 {
   height: 400px;
 }
 
-p {
+.p {
   color: white;
   padding: 20px;
 }
